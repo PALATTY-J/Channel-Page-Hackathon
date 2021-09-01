@@ -1,0 +1,3688 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Georama:wght@300&family=STIX+Two+Text:wght@500&display=swap"
+    rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<style type="text/css">
+    @import url(https://fonts.googleapis.com/css?family=Raleway);
+
+    .spark-faq-body {
+        color: #333;
+        background: #fcfcfc;
+        font-family: 'Raleway', sans-serif;
+        overflow-x: hidden;
+    }
+
+    .faq-header {
+        font-size: 42px;
+        border-bottom: 1px dotted #ccc;
+        padding: 24px;
+    }
+
+    .faq-content {
+        margin: 0 auto;
+    }
+
+    .faq-question {
+        padding: 20px 0;
+        border-bottom: 1px dotted #ccc;
+    }
+
+    .spark-faq-panel-title {
+        font-size: 24px;
+        width: 100%;
+        /* position: relative; */
+        margin: 0;
+        /* padding: 10px 10px 0 48px; */
+        display: block;
+        cursor: pointer;
+    }
+
+    .spark-faq-panel-content {
+        font-size: 20px;
+        padding: 0px 14px;
+        margin: 0 40px;
+        height: 0;
+        overflow: hidden;
+        z-index: -1;
+        position: relative;
+        opacity: 0;
+        -webkit-transition: .4s ease;
+        -moz-transition: .4s ease;
+        -o-transition: .4s ease;
+        transition: .4s ease;
+    }
+
+    .panel:checked~.spark-faq-panel-content {
+        height: auto;
+        opacity: 1;
+        padding: 14px;
+    }
+
+    .spark-faq-plus {
+        position: absolute;
+        margin-left: 20px;
+        margin-top: 4px;
+        z-index: 5;
+        font-size: 42px;
+        line-height: 100%;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+        -webkit-transition: .2s ease;
+        -moz-transition: .2s ease;
+        -o-transition: .2s ease;
+        transition: .2s ease;
+    }
+
+    .panel:checked~.spark-faq-plus {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    .panel {
+        display: none;
+    }
+
+
+    .spark-faq-spark_divider {
+        background-color: yellow;
+        height: 8px;
+        border: none;
+        width: 25%;
+        padding: 0;
+        margin: 0;
+        animation: movement 5s infinite linear;
+    }
+
+    @keyframes movement {
+        0% {
+            transform: translate(0%, 0);
+            background-color: #4285f4;
+        }
+
+        25% {
+            transform: translate(150%, 0);
+            background-color: #34a853;
+
+        }
+
+        50% {
+            transform: translate(200%, 0);
+            background-color: #fbbc05;
+
+        }
+
+        75% {
+            transform: translate(250%, 0);
+            background-color: #ea4335;
+
+        }
+
+        100% {
+            transform: translate(300%, 0);
+            background-color: #4285f4;
+
+        }
+    }
+
+    .bottom_border {
+        margin: 0;
+        padding: 0;
+    }
+
+    .spark-faq-section_title {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-family: 'Georama', sans-serif;
+        font-family: 'STIX Two Text', serif;
+        font-size: 30px;
+        margin-bottom: 0.5rem;
+    }
+
+    .spark-faq-content-header {
+        margin-top: 1rem;
+    }
+
+    #spark-navBar-imageSection {
+        width: 100%;
+        height: 400px;
+        background-image: url('https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/navbar_asset.jpeg');
+        background-size: 100% 100%;
+        animation: slider 15s infinite linear;
+    }
+
+    @keyframes slider {
+        0% {
+            background-image: url('https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/navbar_asset.jpeg');
+        }
+
+        35% {
+            background-image: url('https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/navbar_asset1.jpeg');
+        }
+
+        75% {
+            background-image: url('https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/navbar_asset1.jpeg');
+        }
+    }
+
+
+    .spark-navBar-spark-navBar-waves-animation-header {
+        background: linear-gradient(60deg, #4285F4 0%, #34A853 100%);
+        color: white;
+    }
+
+
+
+    .spark-navBar-waves-animation {
+        position: relative;
+        width: 100%;
+        height: 15vh;
+        margin-bottom: -7px;
+        min-height: 100px;
+        max-height: 150px;
+    }
+
+
+    .spark-navBar-waves-parallex>use {
+        animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+    }
+
+    .spark-navBar-waves-parallex>use:nth-child(1) {
+        animation-delay: -2s;
+        animation-duration: 7s;
+    }
+
+    .spark-navBar-waves-parallex>use:nth-child(2) {
+        animation-delay: -3s;
+        animation-duration: 10s;
+    }
+
+    .spark-navBar-waves-parallex>use:nth-child(3) {
+        animation-delay: -4s;
+        animation-duration: 13s;
+    }
+
+    .spark-navBar-waves-parallex>use:nth-child(4) {
+        animation-delay: -5s;
+        animation-duration: 20s;
+    }
+
+    @keyframes move-forever {
+        0% {
+            transform: translate3d(-90px, 0, 0);
+        }
+
+        100% {
+            transform: translate3d(85px, 0, 0);
+        }
+    }
+
+
+    .spark-navBar-mainSection {
+        /* width: 100%; */
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 20px;
+        background-color: rgb(231, 231, 231);
+        padding: 1em;
+        font-family: 'Georama', sans-serif;
+        font-family: 'STIX Two Text', serif;
+    }
+
+    .spark-navBar-mainSection * {
+        box-sizing: border-box;
+        -webkit-transition: all 0.35s ease;
+        transition: all 0.35s ease;
+    }
+
+    .spark-navBar-mainSection li {
+        display: inline-block;
+        list-style: outside none none;
+        /* margin: 0 1.2em; */
+        overflow: hidden;
+        vertical-align: middle;
+    }
+
+    .spark-navBar-mainSection a {
+        padding: 0 0.5em 0 0.2em;
+        color: black;
+        position: relative;
+        display: inline-block;
+        letter-spacing: 1px;
+        margin: 0em;
+        text-decoration: none;
+    }
+
+    .spark-navBar-mainSection a:before,
+    .spark-navBar-mainSection a:after {
+        position: absolute;
+        -webkit-transition: all 0.35s ease;
+        transition: all 0.35s ease;
+    }
+
+    .spark-navBar-mainSection a:before {
+        right: 100%;
+        display: block;
+        width: 3px;
+        height: 100%;
+        content: "";
+        background-color: #EA4335;
+    }
+
+    .spark-navBar-mainSection li:hover a,
+    .spark-navBar-mainSection .current a {
+        border-bottom: 5px solid #34A853;
+    }
+
+    #spark-navBar-imageSection,
+    .spark-navBar-mainSection,
+    .spark-navBar-spark-navBar-waves-animation-header {
+        margin: 0;
+    }
+
+    .spark-navBar-mainSection li {
+        cursor: pointer;
+    }
+
+    .spark-announcement-container {
+        width: 100%;
+        height: 40vh;
+        overflow-y: scroll;
+        display: grid;
+        grid-template-columns: 70% 30%;
+    }
+
+    .spark-announcement-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .spark-announcement-container:hover .spark-announcement-container::-webkit-scrollbar {
+        display: block;
+    }
+
+    .spark-announcement-notices {
+        overflow-y: scroll;
+    }
+
+    .spark-announcement-notices::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    .spark-announcement-notices::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    .spark-announcement-notices::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+
+    .spark-announcement-notices::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+    .spark-announcement-news {
+        overflow-y: scroll;
+    }
+
+    .spark-announcement-news::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    .spark-announcement-news::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    .spark-announcement-news::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+
+    .spark-announcement-news::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+    .spark-announcement-banner {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .spark-announcements-notices-container {
+        display: flex;
+        width: 80%;
+        height: 20ch;
+        padding: 1rem;
+        margin: 1rem;
+        border: 1px solid;
+        border-radius: 10px;
+    }
+
+    .spark-announcements-notices-image {
+        height: 100%;
+        border-radius: 10px;
+    }
+
+    .spark-announcements-notices-content {
+        width: 80%;
+        padding: 1rem;
+        overflow: hidden;
+    }
+
+    .spark-announcements-news-container {
+        padding: 1rem;
+        text-align: center;
+        margin: 1rem;
+        background: #ea4335;
+        border-radius: 10px;
+    }
+
+    .aboutus-content-container {
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .aboutus-content_content {
+        font-family: 'Georama', sans-serif;
+        font-family: 'STIX Two Text', serif;
+    }
+
+    .aboutus-spark_divider {
+        background-color: yellow;
+        height: 8px;
+        border: none;
+        width: 25%;
+        padding: 0;
+        margin: 0;
+        animation: movement 5s infinite linear;
+    }
+
+    @keyframes movement {
+        0% {
+            transform: translate(0%, 0);
+            background-color: #4285f4;
+        }
+
+        25% {
+            transform: translate(150%, 0);
+            background-color: #34a853;
+
+        }
+
+        50% {
+            transform: translate(200%, 0);
+            background-color: #fbbc05;
+
+        }
+
+        75% {
+            transform: translate(250%, 0);
+            background-color: #ea4335;
+
+        }
+
+        100% {
+            transform: translate(300%, 0);
+            background-color: #4285f4;
+
+        }
+    }
+
+    .aboutus-bottom_border {
+        margin: 0;
+        padding: 0;
+    }
+
+    .aboutus-section_title {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-family: 'Georama', sans-serif;
+        font-family: 'STIX Two Text', serif;
+        font-size: 30px;
+        margin-bottom: 0.5rem;
+    }
+
+    .aboutus-content-header {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .spark-academics-heading {
+        text-align: left;
+        margin: 0;
+        padding: 0;
+        margin-top: 0.5em;
+        font-family: 'Georama', sans-serif;
+        font-family: 'STIX Two Text', serif;
+        margin-left: 0.5em;
+    }
+
+    .spark-academics-content {
+        margin-left: 0.5em;
+        font-family: 'Georama', sans-serif;
+        font-family: 'STIX Two Text', serif;
+    }
+
+    .spark-academics-cardlist {
+        list-style: none;
+        width: 100%;
+        align-items: center;
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+
+    .spark-academics-card-listItem {
+        transition: all 0.5s ease;
+        width: 30%;
+        height: 100%;
+        flex: none;
+        will-change: transform;
+        animation: marqueeClone 25s linear infinite;
+        animation-play-state: running;
+    }
+
+    @keyframes marqueeClone {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        100% {
+            transform: translate(-710%, 0);
+        }
+    }
+
+    .spark-academics-card {
+        background-color: white;
+        width: 80%;
+        margin: 1em;
+        padding: 1em;
+        box-shadow: 10px 10px 10px #777777;
+        border-radius: 10px;
+        margin-bottom: 2em;
+    }
+
+    .spark-academics-cardlist:hover>.spark-academics-card-listItem {
+        animation-play-state: paused;
+    }
+
+    .spark-academics-card:hover {
+        transition: all 0.5s ease;
+        transform: rotate(0deg);
+    }
+
+    .spark-academics-train {
+        background-image: linear-gradient(#fefffe, #e1e3e6 100%);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        overflow: hidden;
+        height: 70%;
+
+    }
+
+    .spark-skewed-left {
+        transform: rotate(5deg);
+    }
+
+    .spark-skewed-right {
+        transform: rotate(-5deg);
+    }
+
+    .spark-card-image {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .spark-bg-blue {
+        border: #4285f4 solid 3px;
+        opacity: 0.9;
+    }
+
+    .spark-bg-green {
+        border: #34a853 solid 3px;
+        opacity: 0.9;
+
+    }
+
+    .spark-bg-yellow {
+        border: #fbbc05 solid 3px;
+        opacity: 0.9;
+
+    }
+
+    .spark-bg-red {
+        border: #ea4335 solid 3px;
+        opacity: 0.9;
+
+    }
+
+    .spark-facilities-spark_divider {
+        background-color: yellow;
+        height: 8px;
+        border: none;
+        width: 25%;
+        padding: 0;
+        margin: 0;
+        animation: movement 5s infinite linear;
+    }
+
+    @keyframes movement {
+        0% {
+            transform: translate(0%, 0);
+            background-color: #4285f4;
+        }
+
+        25% {
+            transform: translate(150%, 0);
+            background-color: #34a853;
+
+        }
+
+        50% {
+            transform: translate(200%, 0);
+            background-color: #fbbc05;
+
+        }
+
+        75% {
+            transform: translate(250%, 0);
+            background-color: #ea4335;
+
+        }
+
+        100% {
+            transform: translate(300%, 0);
+            background-color: #4285f4;
+
+        }
+    }
+
+    .spark-facilities-bottom_border {
+        margin: 0;
+        padding: 0;
+    }
+
+    .spark-facilities-section_title {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-family: 'Georama', sans-serif;
+        font-family: 'STIX Two Text', serif;
+        font-size: 30px;
+        margin-bottom: 0.5rem;
+    }
+
+    @media only screen and (min-device-width: 300px) and (max-device-width: 820px) and (-webkit-min-device-pixel-ratio: 2) {
+        .spark-academics-card-listItem {
+            margin: 1em;
+        }
+
+        .spark-academics-train {
+            padding: 10em;
+        }
+    }
+
+    .spark-facilities-content-header {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+
+    }
+
+    .spark-hof-profile_card {
+        height: 99%;
+        width: 63%;
+        background-color: rgb(255, 255, 255);
+        padding: 1rem;
+        border-radius: 12px;
+        box-shadow: 10px 10px 10px grey;
+        margin-bottom: 1rem;
+    }
+
+    .spark-hof-profile_picture {
+        width: 100%;
+        border-radius: 12%;
+        filter: grayscale(100%);
+    }
+
+    .spark-hof-profile_card:hover .spark-hof-profile_picture {
+        transition: all 0.6s ease;
+        filter: grayscale(0%);
+    }
+
+    .spark-hof-profile_card:hover {
+        transition: all 0.6s ease;
+        transform: scale(1.1);
+    }
+
+    .spark-hof-profile_card_blue:hover {
+        background-color: #4285f4;
+    }
+
+    .spark-hof-profile_card_blue {
+        border: #4285f4 3px solid;
+    }
+
+    .spark-hof-profile_card_green:hover {
+        background-color: #34a853;
+    }
+
+    .spark-hof-profile_card_green {
+        border: #34a853 3px solid;
+    }
+
+    .spark-hof-profile_card_yellow:hover {
+        background-color: #fbbc05;
+    }
+
+    .spark-hof-profile_card_yellow {
+        border: #fbbc05 3px solid;
+    }
+
+    .spark-hof-profile_card_red:hover {
+        background-color: #ea4335;
+    }
+
+    .spark-hof-profile_card_red {
+        border: #ea4335 3px solid;
+    }
+
+
+    .spark-hof-profile_name {
+        margin-bottom: 0;
+        font-family: 'Georama', sans-serif;
+        font-family: 'STIX Two Text', serif;
+        font-size: 20px;
+    }
+
+    .spark-hof-profile_desc {
+        font-style: italic;
+        font-family: 'Georama', sans-serif;
+        font-family: 'STIX Two Text', serif;
+    }
+
+    .spark-hof-profile_std {
+        display: inline-block;
+        margin-bottom: .2em;
+        font-family: 'Georama', sans-serif;
+        font-family: 'STIX Two Text', serif;
+    }
+
+    .spark-hof-card_container {
+        margin: 2em;
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        row-gap: 5em;
+        margin-bottom: 10rem;
+    }
+
+    .spark-hof-spark_divider {
+        background-color: yellow;
+        height: 8px;
+        border: none;
+        width: 25%;
+        padding: 0;
+        margin: 0;
+        animation: movement 5s infinite linear;
+    }
+
+    @keyframes movement {
+        0% {
+            transform: translate(0%, 0);
+            background-color: #4285f4;
+        }
+
+        25% {
+            transform: translate(150%, 0);
+            background-color: #34a853;
+
+        }
+
+        50% {
+            transform: translate(200%, 0);
+            background-color: #fbbc05;
+
+        }
+
+        75% {
+            transform: translate(250%, 0);
+            background-color: #ea4335;
+
+        }
+
+        100% {
+            transform: translate(300%, 0);
+            background-color: #4285f4;
+
+        }
+    }
+
+    .spark-hof-bottom_border {
+        margin: 0;
+        padding: 0;
+    }
+
+    .spark-hof-section_title {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-family: 'Georama', sans-serif;
+        font-family: 'STIX Two Text', serif;
+        font-size: 30px;
+        margin-bottom: 0.5rem;
+    }
+
+    .spark-hof-content-header {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+
+    }
+
+    @media only screen and (min-device-width: 300px) and (max-device-width: 820px) and (-webkit-min-device-pixel-ratio: 2) {
+        .spark-hof-card_container {
+            display: grid;
+            grid-template-columns: auto auto;
+        }
+    }
+
+    .spark-sparkles-spark-sparkles-card-container {
+        /*   position: absolute; */
+        width: 100%;
+        /* top: 60px; */
+        /* left: calc(50% - 200px); */
+        display: flex;
+        margin-top: 5rem;
+        margin-bottom: 3rem;
+        margin-left: 5rem;
+    }
+
+    .spark-sparkles-card {
+        /* display: flex; */
+        text-decoration: none;
+        height: 280px;
+        width: 200px;
+        background-color: rgb(233, 231, 231);
+        /*#17141d*/
+        border: 2px solid rgb(204, 185, 185);
+        border-radius: 10px;
+        box-shadow: -1rem 0 3rem rgb(122, 96, 96);
+        /*   margin-left: -50px; */
+        transition: 0.4s ease-out;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .spark-sparkles-card:not(:first-child) {
+        margin-left: -50px;
+    }
+
+    .spark-sparkles-card:hover {
+        transform: translateY(-20px);
+        transition: 0.4s ease-out;
+    }
+
+    .spark-sparkles-card:hover~.spark-sparkles-card {
+        position: relative;
+        left: 50px;
+        transition: 0.4s ease-out;
+    }
+
+    .spark-sparkles-card:hover .stroke {
+        stroke-dashoffset: 100;
+        transition: 0.6s ease-out;
+    }
+
+    .spark-sparkles-card_title {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .spark-sparkles-card_image {
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+    }
+
+
+    .spark-sparkles-card_animation {
+        border-radius: 50%;
+    }
+
+    .bg_spark-sparkles-card-blue {
+        margin-top: 0.5em;
+        background-color: #4285f4;
+        border-radius: 10px;
+    }
+
+    .bg_spark-sparkles-card-green {
+        margin-top: 0.5em;
+        background-color: #34a853;
+        border-radius: 10px;
+    }
+
+    .bg_spark-sparkles-card-yellow {
+        margin-top: 0.5em;
+        background-color: #fbbc05;
+        border-radius: 10px;
+    }
+
+    .bg_spark-sparkles-card-red {
+        margin-top: 0.5em;
+        background-color: #ea4335;
+        border-radius: 10px;
+    }
+
+    .spark-sparkles-spark_divider {
+        background-color: yellow;
+        height: 8px;
+        border: none;
+        width: 25%;
+        padding: 0;
+        margin: 0;
+        animation: movement 5s infinite linear;
+    }
+
+    @keyframes movement {
+        0% {
+            transform: translate(0%, 0);
+            background-color: #4285f4;
+        }
+
+        25% {
+            transform: translate(150%, 0);
+            background-color: #34a853;
+
+        }
+
+        50% {
+            transform: translate(200%, 0);
+            background-color: #fbbc05;
+
+        }
+
+        75% {
+            transform: translate(250%, 0);
+            background-color: #ea4335;
+
+        }
+
+        100% {
+            transform: translate(300%, 0);
+            background-color: #4285f4;
+
+        }
+    }
+
+    .spark-sparkles-bottom_border {
+        margin: 0;
+        padding: 0;
+    }
+
+    .spark-sparkles-spark_divider {
+        background-color: yellow;
+        height: 8px;
+        border: none;
+        width: 25%;
+        padding: 0;
+        margin: 0;
+        animation: movement 5s infinite linear;
+    }
+
+    @keyframes movement {
+        0% {
+            transform: translate(0%, 0);
+            background-color: #4285f4;
+        }
+
+        25% {
+            transform: translate(150%, 0);
+            background-color: #34a853;
+
+        }
+
+        50% {
+            transform: translate(200%, 0);
+            background-color: #fbbc05;
+
+        }
+
+        75% {
+            transform: translate(250%, 0);
+            background-color: #ea4335;
+
+        }
+
+        100% {
+            transform: translate(300%, 0);
+            background-color: #4285f4;
+
+        }
+    }
+
+    .spark-sparkles-bottom_border {
+        margin: 0;
+        padding: 0;
+    }
+
+    .spark-sparkles-section_title {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-family: 'Georama', sans-serif;
+        font-family: 'STIX Two Text', serif;
+        font-size: 30px;
+        margin-bottom: 0.5rem;
+    }
+
+    .spark-sparkles-content-header {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .spark-gallery-container {
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20%;
+        gap: 5rem;
+        margin: 5rem;
+    }
+
+    .spark-gallery-photo-card {
+        background-color: white;
+        border-radius: 10px;
+        width: 100%;
+        padding: 1em;
+        padding-bottom: 1.5em;
+        box-shadow: 10px 10px 10px gray;
+    }
+
+    .spark-gallery-photo-card:hover {
+        transition: all 1s ease;
+        transform: scale(1.1);
+    }
+
+    .spark-gallery-image {
+        width: 100%;
+        border-radius: 10px;
+        height: auto;
+    }
+
+    .spark-gallery-date {
+        margin: 0;
+        padding: 0;
+        margin-top: 0.5rem;
+        text-align: right;
+        font-family: 'MonteCarlo', cursive;
+    }
+
+    .spark-gallery-title {
+        text-align: center;
+        font-family: 'MonteCarlo', cursive;
+        font-size: 25px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .spark-gallery-skew-left {
+        transform: rotate(1deg);
+    }
+
+    .spark-gallery-skew-right {
+        transform: rotate(-1deg);
+
+    }
+
+    .spark-gallery-photo-card-border-blue {
+        border: 2px dashed #4285f4;
+
+    }
+
+    .spark-gallery-photo-card-border-green {
+        border: 2px dashed #34a853;
+
+    }
+
+    .spark-gallery-photo-card-border-yellow {
+        border: 2px dashed #fbbc05;
+
+    }
+
+    .spark-gallery-photo-card-border-red {
+        border: 2px dashed #ea4335;
+
+    }
+
+
+    @keyframes typing {
+        from {
+            width: 0
+        }
+    }
+
+    @keyframes blink {
+        50% {
+            border-color: transparent
+        }
+    }
+
+    .spark-gallery-spark_divider {
+        background-color: yellow;
+        height: 8px;
+        border: none;
+        width: 25%;
+        padding: 0;
+        margin: 0;
+        animation: movement 5s infinite linear;
+    }
+
+    @keyframes movement {
+        0% {
+            transform: translate(0%, 0);
+            background-color: #4285f4;
+        }
+
+        25% {
+            transform: translate(150%, 0);
+            background-color: #34a853;
+
+        }
+
+        50% {
+            transform: translate(200%, 0);
+            background-color: #fbbc05;
+
+        }
+
+        75% {
+            transform: translate(250%, 0);
+            background-color: #ea4335;
+
+        }
+
+        100% {
+            transform: translate(300%, 0);
+            background-color: #4285f4;
+
+        }
+    }
+
+    .spark-gallery-bottom_border {
+        margin: 0;
+        padding: 0;
+    }
+
+    .spark-gallery-section_title {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-family: 'Georama', sans-serif;
+        font-family: 'STIX Two Text', serif;
+        font-size: 30px;
+        margin-bottom: 0.5rem;
+    }
+
+    .spark-gallery-content-header {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+
+    }
+
+    @media only screen and (min-device-width: 300px) and (max-device-width: 820px) and (-webkit-min-device-pixel-ratio: 2) {
+        .spark-gallery-container {
+            display: grid;
+            grid-template-columns: auto auto;
+        }
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .active-profile-page {
+        display: block;
+    }
+
+    .inactive-profile-page {
+        display: none;
+    }
+
+    .my-profile-container {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-columns: 20% 60% 20%;
+    }
+
+    .my-profile-options-section {
+        background-color: aliceblue;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        border: 2px solid gray;
+        border-radius: 10px;
+        height: 100vh;
+
+    }
+
+    .my-profile-content-section {
+        background-color: aliceblue;
+        overflow-y: scroll;
+        height: 100vh;
+    }
+
+    .friends-feed-section {
+        background-color: aliceblue;
+        display: flex;
+        flex-direction: column;
+        border: 2px solid gray;
+        border-radius: 10px;
+        overflow-y: scroll;
+        height: 100vh;
+
+    }
+
+    .my-profile-content-section::-webkit-scrollbar,
+    .friends-feed-section::-webkit-scrollbar {
+        display: none;
+    }
+
+    .options-division {
+        width: 100%;
+        vertical-align: middle;
+        font-size: 20px;
+        cursor: pointer;
+        text-align: start;
+        padding-left: 5rem;
+    }
+
+    .options-division:hover {
+        /* background-color: rgb(214, 220, 226); */
+        text-shadow: 1px 1px 2px green;
+    }
+
+    .option-active {
+        text-shadow: 1px 1px 2px green;
+    }
+
+    .icons-individual {
+        vertical-align: middle;
+        font-size: 21px;
+        color: gray;
+    }
+
+    .feed-profile {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        vertical-align: middle;
+        padding: 0rem 1rem;
+        border-radius: 10px;
+        margin: 1rem 0rem;
+    }
+
+    .feed-profile-image {
+        width: 50px;
+        border-radius: 50%;
+        border: 3px solid #008000;
+    }
+
+    .feed-profile-text {
+        color: gray;
+        text-align: center;
+        vertical-align: middle;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .feed-profile-text span:hover {
+        cursor: pointer;
+        color: blue;
+    }
+
+    .cover-page-profile {
+        background-image: url(https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/hofprofile9.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        inset: 0;
+        display: flex;
+        justify-content: end;
+        align-content: end;
+        align-items: flex-end;
+        height: 35vh;
+    }
+
+    .profile-picture {
+        position: absolute;
+        top: 44%;
+        left: 2%;
+        height: 200px;
+        border-radius: 50%;
+    }
+
+    #my-profile-section {
+        overflow: hidden;
+    }
+
+    .profile-name {
+        position: absolute;
+        top: 82%;
+        left: 28%;
+        color: white;
+        font-size: 30px;
+
+    }
+
+    .profile-home-options-container {
+        height: 5vh;
+        width: 100%;
+        display: flex;
+        background: lightgray;
+        vertical-align: middle;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .profile-home-options {
+        height: 10%;
+        width: 40%;
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .profile-home-options li:hover {
+        text-shadow: 1px 1px 2px green;
+        padding: 0.2rem;
+        cursor: pointer;
+    }
+
+    .profile-home-about-me {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        border: 2px solid gray;
+        margin: 1rem;
+        border-radius: 10px;
+    }
+
+    .heading-profile-about-me {
+        font-size: 30px;
+        font-weight: bold;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid black;
+    }
+
+    .about-me-individual-options-container {
+        display: grid;
+        width: 100%;
+        grid-template-columns: auto auto auto;
+    }
+
+    .about-me-individual-options {
+        display: flex;
+        width: 100%;
+        justify-content: end;
+        margin-top: .5rem;
+        margin-left: 1rem;
+    }
+
+    .about-me-individual-options-heading {
+        word-wrap: none;
+        white-space: nowrap;
+    }
+
+    .table-container {
+        padding: 1rem;
+        margin: 5rem;
+    }
+
+    .flex-table {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid black;
+    }
+
+    .grid-rows-6-spark {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .grid-row-cell {
+        padding: .5rem;
+        text-align: left;
+    }
+
+    .table-heading {
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 2rem;
+    }
+
+    .cell-hightlight {
+        background-color: lightblue;
+        color: white;
+        font-weight: bold;
+    }
+
+    .cell-hightlight-gn {
+        background-color: lightgreen;
+        color: white;
+        font-weight: 300;
+    }
+
+    .curriculam-subject-name {
+        font-size: 18px;
+        font-weight: bold;
+        margin-left: 3rem;
+    }
+
+    .subject-table {
+        padding: .5rem;
+    }
+
+    .subject-table-grid-row {
+        display: grid;
+        grid-template-columns: 20% auto;
+    }
+
+    .module-name {
+        padding: .5rem;
+    }
+
+    .curriculam-flex-data {
+        padding: .5rem;
+    }
+
+    .curriculam-border-top {
+        border-top: 1px solid black
+    }
+
+    .curriculam-border-right {
+        border-right: 1px solid black
+    }
+
+    .curriculam-border-left {
+        border-left: 1px solid black
+    }
+
+    .curriculam-border-bottom {
+        border-bottom: 1px solid black
+    }
+
+    .spark-courses-section-heading {
+        width: 100%;
+        font-size: 28px;
+        font-weight: 400;
+        padding-bottom: .5rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .spark-courses-card-container {
+        display: grid;
+        grid-template-columns: 40% 40%;
+        width: 100%;
+        padding: 1rem;
+        grid-gap: 4rem;
+    }
+
+    .spark-courses-card {
+        width: 75%;
+        padding: 1rem;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+
+    .spark-courses-image {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .course-heading {
+        margin: 1rem 0rem;
+        font-weight: 100;
+    }
+
+    .spark-chat-container {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        height: 100%;
+        background: antiquewhite;
+    }
+
+    .spark-chat-feed {
+        padding: 1rem;
+        border: 1px solid;
+        border-radius: 10px;
+        border-top-left-radius: 0;
+        overflow-y: scroll;
+    }
+
+    .spark-chat-feed::-webkit-scrollbar {
+        display: none;
+    }
+
+    .spark-chat-feed-profile-container {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        padding: .5rem;
+    }
+
+    .spark-chat-feed-profile-container:hover {
+        background-color: rgb(131, 50, 50);
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .spark-chat-feed-profile-image {
+        border-radius: 50%;
+        height: 50px;
+    }
+
+    .spark-chat-feed-profile-details {
+        text-align: start;
+        margin-left: .5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        justify-items: start;
+    }
+
+    .spark-chat-online-icon {
+        color: #008000;
+        font-size: 10px;
+        vertical-align: middle;
+    }
+
+    .spark-chat-offline-icon {
+        color: #c2c9c2;
+        font-size: 10px;
+        vertical-align: middle;
+    }
+
+    .spark-chat-page {
+        display: flex;
+        height: 100vh;
+        flex-direction: column;
+    }
+
+    .spark-chat-page-heading {
+        height: 10%;
+        padding: 1rem;
+        display: flex;
+        background: #5f88ad;
+        border-radius: 9px;
+        align-content: center;
+        align-items: center;
+    }
+
+    .spark-chat-page-heading-image {
+        height: 80%;
+        border-radius: 50%;
+    }
+
+    .spark-chat-page-heading-content {
+        margin-left: 1rem;
+    }
+
+    .spark-chat-page-heading-name {
+        font-size: 21px;
+    }
+
+    .spark-chat-page-heading-last-seen {
+        font-size: 14px;
+    }
+
+    .spark-chat-page-content {
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+    }
+
+    .spark-chat-page-content::-webkit-scrollbar {
+        display: none;
+    }
+
+    .messages-from {
+        padding: 1rem;
+        background: wheat;
+        width: 45%;
+        margin-left: 1rem;
+        margin-top: 1rem;
+        border-radius: 10px;
+        align-self: flex-start;
+    }
+
+    .messages-to {
+        padding: 1rem;
+        background: wheat;
+        width: 45%;
+        margin-top: 1rem;
+        border-radius: 10px;
+        align-self: flex-end;
+        margin-right: 1rem;
+    }
+
+    .spark-chat-page-input {
+        width: 100%;
+        height: 6%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .spark-chat-page-input-element {
+        width: 100%;
+        padding: .5rem;
+    }
+
+    .spark-awards-container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .spark-awards-card-container {
+        display: flex;
+        width: 85%;
+        padding: 1rem;
+        margin: 1rem;
+        border: 2px solid;
+        height: 20%;
+        border-radius: 10px;
+    }
+
+    .spark-awards-image {
+        width: 70%;
+        padding: 1rem;
+        border-radius: 30px;
+    }
+
+    .spark-awards-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 1rem;
+        justify-content: center;
+    }
+
+    .spark-awards-heading {
+        font-size: 20px;
+    }
+
+
+    .spark-awards-download-certificate {
+        align-self: flex-end;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+
+    <section id="nav-bar-section">
+        <div id="spark-navBar-imageSection"></div>
+
+        <div>
+            <ul class="spark-navBar-mainSection">
+                <li><a onclick="scrollToElement('about-us-section')" class="about-spark-template"
+                        data-hover="About Us ">About Us
+                        &nbsp; &nbsp; &nbsp;</a></li>
+                <li><a onclick="scrollToElement('facilities-section')" class="facilities-spark-template"
+                        data-hover="Facilities ">Facilities &nbsp; &nbsp; &nbsp;</a></li>
+                <li><a onclick="scrollToElement('hall-of-fame-section')" class="hof-spark-template"
+                        data-hover="Hall Of Fame ">Hall
+                        Of Fame &nbsp; &nbsp; &nbsp;</a></li>
+                <li><a onclick="scrollToElement('spark-section')" class="spark-spark-template" data-hover="Spark ">Spark
+                        &nbsp; &nbsp; &nbsp;</a></li>
+                <li><a onclick="scrollToElement('gallery-section')" class="gallery-spark-template"
+                        data-hover="Gallery ">Gallery
+                        &nbsp; &nbsp; &nbsp;</a></li>
+                <li><a onclick="scrollToElement('announcements-section')" class="faq-spark-template">News
+                        &nbsp;
+                        &nbsp; &nbsp;</a></li>
+                <li><a onclick="scrollToElement('faq-section')" class="faq-spark-template" data-hover="FAQ'S ">FAQ'S
+                        &nbsp;
+                        &nbsp; &nbsp;</a></li>
+                <li><a onclick="myprofile()" id='profile-toggle'>My Profile
+                        &nbsp;
+                        &nbsp; &nbsp;</a></li>
+            </ul>
+
+        </div>
+
+        <div class="spark-navBar-spark-navBar-waves-animation-header">
+            <div>
+                <svg class="spark-navBar-waves-animation" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none"
+                    shape-rendering="auto">
+                    <defs>
+                        <path id="gentle-wave"
+                            d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                    </defs>
+                    <g class="spark-navBar-waves-parallex">
+                        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                        <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+
+    <section id='about-us-section'>
+        <div class="aboutus-content-header">
+            <p class="aboutus-section_title">About Us</p>
+            <hr class="aboutus-spark_divider">
+            <hr class="aboutus-bottom_border">
+        </div>
+
+        <div class="aboutus-content-container">
+            <div>
+                <video src="https://github.com/PALATTY-J/Channel-Page-Hackathon/blob/main/aboutus.mp4?raw=true" autoplay
+                    muted loop height="200"></video>
+            </div>
+            <div class="content_content">
+                <p>
+                    Morbi metus massa, vulputate eu lobortis nec, vestibulum at neque. Sed non dolor vel sem
+                    congue
+                    congue eu nec erat. Quisque eleifend tristique sagittis. In hac habitasse platea dictumst.
+                    Quisque eget nisl blandit, ultrices dui elementum, laoreet metus. Morbi tempus mollis erat,
+                    sed
+                    semper erat maximus in. Nullam rutrum sagittis erat, nec hendrerit leo. Ut lobortis
+                    ullamcorper
+                    neque. Quisque velit sapien, tincidunt in magna quis, dictum vehicula erat. Sed non dolor
+                    rhoncus, gravida metus in, mollis mi. Pellentesque ut justo tincidunt, consectetur mauris a,
+                    aliquam purus. Aenean porta nec erat in accumsan. Pellentesque habitant morbi tristique
+                    senectus
+                    et netus et malesuada fames ac turpis egestas. Maecenas eget nisi tincidunt, iaculis mauris
+                    in,
+                    elementum tortor. Nam auctor eget mauris sit amet vulputate. Nam tincidunt efficitur mauris,
+                    a
+                    porttitor lacus fermentum at.
+                </p>
+                <p>
+                    Vivamus pharetra augue at maximus faucibus. Suspendisse aliquam metus lorem, ac suscipit
+                    dolor
+                    cursus at. Etiam risus diam, rhoncus vel posuere eu, sodales cursus arcu. Vestibulum pretium
+                    leo
+                    lectus. Phasellus finibus est a orci faucibus bibendum. Quisque non metus quam. Fusce id
+                    lectus
+                    nec purus pulvinar porttitor dapibus sed turpis.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="mission-section">
+        <div class="aboutus-content-header">
+            <p class="aboutus-section_title">Mission</p>
+            <hr class="aboutus-spark_divider">
+            <hr class="aboutus-bottom_border">
+        </div>
+        <div class="aboutus-content-container">
+            <div>
+                <video src="https://github.com/PALATTY-J/Channel-Page-Hackathon/blob/main/mission.mp4?raw=true" autoplay
+                    muted loop height="200"></video>
+            </div>
+            <div class="content_content">
+                <p>
+                    Morbi metus massa, vulputate eu lobortis nec, vestibulum at neque. Sed non dolor vel sem
+                    congue
+                    congue eu nec erat. Quisque eleifend tristique sagittis. In hac habitasse platea dictumst.
+                    Quisque eget nisl blandit, ultrices dui elementum, laoreet metus. Morbi tempus mollis erat,
+                    sed
+                    semper erat maximus in. Nullam rutrum sagittis erat, nec hendrerit leo. Ut lobortis
+                    ullamcorper
+                    neque. Quisque velit sapien, tincidunt in magna quis, dictum vehicula erat. Sed non dolor
+                    rhoncus, gravida metus in, mollis mi. Pellentesque ut justo tincidunt, consectetur mauris a,
+                    aliquam purus. Aenean porta nec erat in accumsan. Pellentesque habitant morbi tristique
+                    senectus
+                    et netus et malesuada fames ac turpis egestas. Maecenas eget nisi tincidunt, iaculis mauris
+                    in,
+                    elementum tortor. Nam auctor eget mauris sit amet vulputate. Nam tincidunt efficitur mauris,
+                    a
+                    porttitor lacus fermentum at.
+                </p>
+                <p>
+                    Vivamus pharetra augue at maximus faucibus. Suspendisse aliquam metus lorem, ac suscipit
+                    dolor
+                    cursus at. Etiam risus diam, rhoncus vel posuere eu, sodales cursus arcu. Vestibulum pretium
+                    leo
+                    lectus. Phasellus finibus est a orci faucibus bibendum. Quisque non metus quam. Fusce id
+                    lectus
+                    nec purus pulvinar porttitor dapibus sed turpis.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="vision-section">
+        <div class="aboutus-content-header">
+            <p class="aboutus-section_title">Vision</p>
+            <hr class="aboutus-spark_divider">
+            <hr class="aboutus-bottom_border">
+        </div>
+        <div class="aboutus-content-container">
+            <div>
+                <video src="https://github.com/PALATTY-J/Channel-Page-Hackathon/blob/main/vision.mp4?raw=true" autoplay
+                    muted loop height="200"></video>
+            </div>
+            <div class="content_content">
+                <p>
+                    Morbi metus massa, vulputate eu lobortis nec, vestibulum at neque. Sed non dolor vel sem
+                    congue
+                    congue eu nec erat. Quisque eleifend tristique sagittis. In hac habitasse platea dictumst.
+                    Quisque eget nisl blandit, ultrices dui elementum, laoreet metus. Morbi tempus mollis erat,
+                    sed
+                    semper erat maximus in. Nullam rutrum sagittis erat, nec hendrerit leo. Ut lobortis
+                    ullamcorper
+                    neque. Quisque velit sapien, tincidunt in magna quis, dictum vehicula erat. Sed non dolor
+                    rhoncus, gravida metus in, mollis mi. Pellentesque ut justo tincidunt, consectetur mauris a,
+                    aliquam purus. Aenean porta nec erat in accumsan. Pellentesque habitant morbi tristique
+                    senectus
+                    et netus et malesuada fames ac turpis egestas. Maecenas eget nisi tincidunt, iaculis mauris
+                    in,
+                    elementum tortor. Nam auctor eget mauris sit amet vulputate. Nam tincidunt efficitur mauris,
+                    a
+                    porttitor lacus fermentum at.
+                </p>
+                <p>
+                    Vivamus pharetra augue at maximus faucibus. Suspendisse aliquam metus lorem, ac suscipit
+                    dolor
+                    cursus at. Etiam risus diam, rhoncus vel posuere eu, sodales cursus arcu. Vestibulum pretium
+                    leo
+                    lectus. Phasellus finibus est a orci faucibus bibendum. Quisque non metus quam. Fusce id
+                    lectus
+                    nec purus pulvinar porttitor dapibus sed turpis.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id='facilities-section'>
+        <div class="spark-facilities-content-header">
+            <p class="spark-facilities-section_title">Facilities</p>
+
+            <hr class="spark-facilities-spark_divider" />
+            <hr class="spark-facilities-bottom_border" />
+        </div>
+
+        <div class="spark-academics-train">
+            <ul class="spark-academics-cardlist">
+                <li class="spark-academics-card-listItem">
+                    <div class="spark-academics-card spark-skewed-left spark-bg-blue"><img alt=""
+                            class="spark-card-image"
+                            src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/amphitheaterAsset.jpeg" />
+                        <h4 class="spark-academics-heading">Amphitheater</h4>
+
+                        <p class="spark-academics-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                            irure
+                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                </li>
+                <li class="spark-academics-card-listItem">
+                    <div class="spark-academics-card spark-skewed-right spark-bg-green"><img alt=""
+                            class="spark-card-image"
+                            src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/auditoriumAsset.jpeg" />
+                        <h4 class="spark-academics-heading">Auditorium</h4>
+
+                        <p class="spark-academics-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                            irure
+                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                </li>
+                <li class="spark-academics-card-listItem">
+                    <div class="spark-academics-card spark-skewed-left spark-bg-yellow"><img alt=""
+                            class="spark-card-image"
+                            src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/bandAsset.jpeg" />
+                        <h4 class="spark-academics-heading">School Band</h4>
+
+                        <p class="spark-academics-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                            irure
+                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                </li>
+                <li class="spark-academics-card-listItem">
+                    <div class="spark-academics-card spark-skewed-right spark-bg-red"><img alt=""
+                            class="spark-card-image"
+                            src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/canteenAsset.jpeg" />
+                        <h4 class="spark-academics-heading">Canteen</h4>
+
+                        <p class="spark-academics-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                            irure
+                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                </li>
+                <li class="spark-academics-card-listItem">
+                    <div class="spark-academics-card spark-skewed-left spark-bg-blue"><img alt=""
+                            class="spark-card-image"
+                            src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/computerlabAsset.jpeg" />
+                        <h4 class="spark-academics-heading">Computer Lab</h4>
+
+                        <p class="spark-academics-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                            irure
+                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                </li>
+                <li class="spark-academics-card-listItem">
+                    <div class="spark-academics-card spark-skewed-right spark-bg-green"><img alt=""
+                            class="spark-card-image"
+                            src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/Labasset.jpeg" />
+                        <h4 class="spark-academics-heading">Laboratory</h4>
+
+                        <p class="spark-academics-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                            irure
+                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                </li>
+                <li class="spark-academics-card-listItem">
+                    <div class="spark-academics-card spark-skewed-left spark-bg-yellow"><img alt=""
+                            class="spark-card-image"
+                            src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/playgroundAsset.jpeg" />
+                        <h4 class="spark-academics-heading">Playground</h4>
+
+                        <p class="spark-academics-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                            irure
+                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                </li>
+                <li class="spark-academics-card-listItem">
+                    <div class="spark-academics-card spark-skewed-left spark-bg-blue"><img alt=""
+                            class="spark-card-image"
+                            src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/amphitheaterAsset.jpeg" />
+                        <h4 class="spark-academics-heading">Amphitheater</h4>
+
+                        <p class="spark-academics-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                            irure
+                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                </li>
+                <li class="spark-academics-card-listItem">
+                    <div class="spark-academics-card spark-skewed-right spark-bg-green"><img alt=""
+                            class="spark-card-image"
+                            src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/auditoriumAsset.jpeg" />
+                        <h4 class="spark-academics-heading">Auditorium</h4>
+
+                        <p class="spark-academics-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                            irure
+                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                </li>
+                <li class="spark-academics-card-listItem">
+                    <div class="spark-academics-card spark-skewed-left spark-bg-yellow"><img alt=""
+                            class="spark-card-image"
+                            src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/bandAsset.jpeg" />
+                        <h4 class="spark-academics-heading">School Band</h4>
+
+                        <p class="spark-academics-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                            irure
+                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                </li>
+                <li class="spark-academics-card-listItem">
+                    <div class="spark-academics-card spark-skewed-right spark-bg-red"><img alt=""
+                            class="spark-card-image"
+                            src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/canteenAsset.jpeg" />
+                        <h4 class="spark-academics-heading">Canteen</h4>
+
+                        <p class="spark-academics-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                            irure
+                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                </li>
+                <li class="spark-academics-card-listItem">
+                    <div class="spark-academics-card spark-skewed-left spark-bg-blue"><img alt=""
+                            class="spark-card-image"
+                            src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/computerlabAsset.jpeg" />
+                        <h4 class="spark-academics-heading">Computer Lab</h4>
+
+                        <p class="spark-academics-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                            irure
+                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                </li>
+                <li class="spark-academics-card-listItem">
+                    <div class="spark-academics-card spark-skewed-right spark-bg-green"><img alt=""
+                            class="spark-card-image"
+                            src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/Labasset.jpeg" />
+                        <h4 class="spark-academics-heading">Laboratory</h4>
+
+                        <p class="spark-academics-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                            irure
+                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                </li>
+                <li class="spark-academics-card-listItem">
+                    <div class="spark-academics-card spark-skewed-left spark-bg-yellow"><img alt=""
+                            class="spark-card-image"
+                            src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/playgroundAsset.jpeg" />
+                        <h4 class="spark-academics-heading">Playground</h4>
+
+                        <p class="spark-academics-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                            irure
+                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="hall-of-fame-section">
+
+        <div class="spark-hof-content-header">
+            <p class="spark-hof-section_title">Hall Of Fame</p>
+
+            <hr class="spark-hof-spark_divider" />
+            <hr class="spark-hof-bottom_border" />
+        </div>
+
+        <div class="spark-hof-card_container">
+            <div class="spark-hof-profile_card spark-hof-profile_card_blue"><img alt=""
+                    class="spark-hof-profile_picture"
+                    src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/hofprofile.jpeg" />
+                <h2 class="spark-hof-profile_name">Mark Cheng</h2>
+                <span class="spark-hof-profile_std">Std : VI A</span><br />
+                <span class="spark-hof-profile_desc">Mathlete, Richmond High School</span>
+            </div>
+
+            <div class="spark-hof-profile_card spark-hof-profile_card_green"><img alt=""
+                    class="spark-hof-profile_picture"
+                    src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/hofprofile2.jpeg" />
+                <h2 class="spark-hof-profile_name">Anna Mariam</h2>
+                <span class="spark-hof-profile_std">Std : IV A</span><br />
+                <span class="spark-hof-profile_desc">Essay Writing, Richmond High School</span>
+            </div>
+
+            <div class="spark-hof-profile_card spark-hof-profile_card_red"><img alt="" class="spark-hof-profile_picture"
+                    src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/hofprofile3.jpeg" />
+                <h2 class="spark-hof-profile_name">Avril Micheal</h2>
+                <span class="spark-hof-profile_std">M.Ed</span><br />
+                <span class="spark-hof-profile_desc">Best Teacher of the Year, Richmond High School</span>
+            </div>
+
+            <div class="spark-hof-profile_card spark-hof-profile_card_yellow"><img alt=""
+                    class="spark-hof-profile_picture"
+                    src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/hofprofile4.jpeg" />
+                <h2 class="spark-hof-profile_name">Lisa Joseph</h2>
+                <span class="spark-hof-profile_std">Std : VII A</span><br />
+                <span class="spark-hof-profile_desc">Swimming Freestyle Gold, Richmond High School</span>
+            </div>
+
+            <div class="spark-hof-profile_card spark-hof-profile_card_blue"><img alt=""
+                    class="spark-hof-profile_picture"
+                    src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/hofprofile5.jpeg" />
+                <h2 class="spark-hof-profile_name">Jason Wang</h2>
+                <span class="spark-hof-profile_desc">District Spelling Bee Gold, Richmond High School</span>
+            </div>
+
+            <div class="spark-hof-profile_card spark-hof-profile_card_green"><img alt=""
+                    class="spark-hof-profile_picture"
+                    src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/hofprofile6.jpeg" />
+                <h2 class="spark-hof-profile_name">Olivia Sui</h2>
+                <span class="spark-hof-profile_desc">Robotics Club Chairman, Richmond High School</span>
+            </div>
+
+            <div class="spark-hof-profile_card spark-hof-profile_card_red"><img alt="" class="spark-hof-profile_picture"
+                    src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/hofprofile7.jpeg" />
+                <h2 class="spark-hof-profile_name">Muhammad</h2>
+                <span class="spark-hof-profile_desc">Valedictorian, 2020, Richmond High School</span>
+            </div>
+
+            <div class="spark-hof-profile_card spark-hof-profile_card_yellow"><img alt=""
+                    class="spark-hof-profile_picture"
+                    src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/hofprofile8.jpeg" />
+                <h2 class="spark-hof-profile_name">Maria Lopez</h2>
+                <span class="spark-hof-profile_desc">Ballet District Gold, Richmond High School</span>
+            </div>
+
+            <div class="spark-hof-profile_card spark-hof-profile_card_blue"><img alt=""
+                    class="spark-hof-profile_picture"
+                    src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/hofprofile9.jpeg" />
+                <h2 class="spark-hof-profile_name">Blaise Thomas</h2>
+                <span class="spark-hof-profile_desc">Gymnastics Gold, Richmond High School</span>
+            </div>
+        </div>
+    </section>
+
+    <section id='spark-section'>
+        <div class="spark-sparkles-content-header">
+            <p class="spark-sparkles-section_title">Spark</p>
+
+            <hr class="spark-sparkles-spark_divider" />
+            <hr class="spark-sparkles-bottom_border" />
+        </div>
+
+        <div>
+            <h4>This section has spark-sparkles-cards that will help you find your passion and help you develop your
+                skills in the respective fields</h4>
+        </div>
+
+        <div class="spark-sparkles-spark-sparkles-card-container"><a class="spark-sparkles-card"
+                href="https://www.instructables.com/" target="_blank">
+                <p class="spark-sparkles-card_title bg_spark-sparkles-card-blue">DIY</p>
+                <img alt="" autoplay="" class="spark-sparkles-card_animation" height="200" loop="" muted=""
+                    src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/DIY.gif" />
+            </a> <a class="spark-sparkles-card" href="https://hackaday.io/" target="_blank">
+                <p class="spark-sparkles-card_title bg_spark-sparkles-card-green">Hobby Electronics</p>
+                <img alt="" autoplay="" class="spark-sparkles-card_animation" height="200" loop="" muted=""
+                    src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/hobbieElectronics.gif" />
+            </a> <a class="spark-sparkles-card"
+                href="https://infyspringboard.onwingspan.com/en/app/toc/lex_auth_0130944224048578562154_shared/overview"
+                target="_blank">
+                <p class="spark-sparkles-card_title bg_spark-sparkles-card-red">Coding</p>
+                <img alt="" autoplay="" class="spark-sparkles-card_animation" height="200" loop="" muted=""
+                    src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/coding.gif" />
+            </a> <a class="spark-sparkles-card"
+                href="https://infyspringboard.onwingspan.com/en/app/toc/lex_auth_01317717324354355221_shared/overview"
+                target="_blank">
+                <p class="spark-sparkles-card_title bg_spark-sparkles-card-yellow">Website Development</p>
+                <img alt="" autoplay="" class="spark-sparkles-card_animation" height="200" loop="" muted=""
+                    src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/webdev.gif" />
+            </a> <a class="spark-sparkles-card"
+                href="https://infyspringboard.onwingspan.com/en/app/toc/lex_auth_012638522204233728363_shared/overview"
+                target="_blank">
+                <p class="spark-sparkles-card_title bg_spark-sparkles-card-blue">Cloud Computing</p>
+                <img alt="" autoplay="" class="spark-sparkles-card_animation" height="200" loop="" muted=""
+                    src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/cloud.gif" />
+            </a> <a class="spark-sparkles-card"
+                href="https://infyspringboard.onwingspan.com/en/app/toc/lex_auth_0130944186949140481940_shared/overview"
+                target="_blank">
+                <p class="spark-sparkles-card_title bg_spark-sparkles-card-green">App Development</p>
+                <img alt="" autoplay="" class="spark-sparkles-card_animation" height="200" loop="" muted=""
+                    src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/appdev.gif" />
+            </a> <a class="spark-sparkles-card"
+                href="https://infyspringboard.onwingspan.com/en/app/toc/lex_auth_013177172174249984277_shared/overview"
+                target="_blank">
+                <p class="spark-sparkles-card_title bg_spark-sparkles-card-green">Video Editing</p>
+                <img alt="" autoplay="" class="spark-sparkles-card_animation" height="200" loop="" muted=""
+                    src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/videoedit.gif" />
+            </a>
+            <!-- <a class="spark-sparkles-card"
+                        href="https://infyspringboard.onwingspan.com/en/app/toc/lex_auth_0130944455622000642764_shared/overview"
+                        target="_blank">
+                        <p class="spark-sparkles-card_title bg_spark-sparkles-card-red">Animation Creation</p>
+                        <img class="spark-sparkles-card_animation"
+                            src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/animator.gif" height="200"
+                            autoplay muted loop>
+                    </a> -->
+            <!-- <a class="spark-sparkles-card" href="https://help.autodesk.com/view/fusion360/ENU/courses/" target="_blank">
+                            <p class="spark-sparkles-card_title bg_spark-sparkles-card-yellow">3d Modelling</p>
+                            <img class="spark-sparkles-card_animation" src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/3dmodeler.gif" height="200" autoplay muted loop>
+                        </a> -->
+        </div>
+    </section>
+
+    <section id='gallery-section'>
+        <div class="spark-gallery-content-header">
+            <p class="spark-gallery-section_title">Gallery</p>
+
+            <hr class="spark-gallery-spark_divider" />
+            <hr class="spark-gallery-bottom_border" />
+        </div>
+
+        <p><small>The images must be of size 1200px*1200px for better asthetics</small></p>
+
+        <div class="spark-gallery-container">
+            <div class="spark-gallery-photo-card spark-gallery-skew-left spark-gallery-photo-card-border-blue"><img
+                    alt="" class="spark-gallery-image"
+                    src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/gallery1.jpeg" />
+                <p class="spark-gallery-title">Sun set</p>
+
+                <p class="spark-gallery-date">25/09/2021</p>
+            </div>
+
+            <div class="spark-gallery-photo-card spark-gallery-skew-right spark-gallery-photo-card-border-green"><img
+                    alt="" class="spark-gallery-image"
+                    src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/gallery2.jpeg" />
+                <p class="spark-gallery-title">Park</p>
+
+                <p class="spark-gallery-date">25/09/2021</p>
+            </div>
+
+            <div class="spark-gallery-photo-card spark-gallery-skew-left spark-gallery-photo-card-border-yellow"><img
+                    alt="" class="spark-gallery-image"
+                    src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/gallery3.jpeg" />
+                <p class="spark-gallery-title">Apple Farm</p>
+
+                <p class="spark-gallery-date">25/09/2021</p>
+            </div>
+
+            <div class="spark-gallery-photo-card spark-gallery-skew-right spark-gallery-photo-card-border-red"><img
+                    alt="" class="spark-gallery-image"
+                    src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/gallery4.jpeg" />
+                <p class="spark-gallery-title">Mountains</p>
+
+                <p class="spark-gallery-date">25/09/2021</p>
+            </div>
+
+            <div class="spark-gallery-photo-card spark-gallery-skew-left spark-gallery-photo-card-border-blue"><img
+                    alt="" class="spark-gallery-image"
+                    src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/gallery5.jpeg" />
+                <p class="spark-gallery-title">Himalayas</p>
+
+                <p class="spark-gallery-date">25/09/2021</p>
+            </div>
+
+            <div class="spark-gallery-photo-card spark-gallery-skew-right spark-gallery-photo-card-border-green"><img
+                    alt="" class="spark-gallery-image"
+                    src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/gallery6.jpeg" />
+                <p class="spark-gallery-title">Light House</p>
+
+                <p class="spark-gallery-date">25/09/2021</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="announcements-section">
+        <div class="aboutus-content-header">
+            <p class="aboutus-section_title">Announcements and News</p>
+            <hr class="aboutus-spark_divider">
+            <hr class="aboutus-bottom_border">
+        </div>
+
+        <style>
+
+        </style>
+        <section class="spark-announcement-container">
+            <section class="spark-announcement-notices">
+                <h1 class="spark-announcement-banner">Notices</h1>
+                <section class="spark-announcements-notices-container">
+                    <div style="width: 20%;padding: 1rem;">
+                        <img class="spark-announcements-notices-image"
+                            src="https://github.com/PALATTY-J/Channel-Page-Hackathon/blob/main/gallery1.jpeg?raw=true">
+                    </div>
+                    <div class="spark-announcements-notices-content">
+                        <p><b>News Title</b></p>
+                        <p style="overflow: hidden;">Morbi metus massa, vulputate eu lobortis nec, vestibulum at neque.
+                            Sed non dolor vel sem
+                            congue congue eu nec erat. Quisque eleifend tristique sagittis. In hac habitasse platea
+                            dictumst. Quisque eget nisl blandit, ultrices dui elementum, laoreet metus. Morbi tempus
+                            mollis erat, sed semper erat maximus in. Nullam rutrum sagittis erat, nec hendrerit leo. Ut
+                            lobortis ullamcorper neque. Quisque velit sapien, tincidunt in magna quis, dictum vehicula
+                            erat. Sed non dolor rhoncus, gravida metus in, mollis mi. Pellentesque ut justo tincidunt,
+                            consectetur mauris a, aliquam purus. Aenean porta nec erat in accumsan. Pellentesque
+                            habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas
+                            eget nisi tincidunt, iaculis mauris in, elementum tortor. Nam auctor eget mauris sit amet
+                            vulputate. Nam tincidunt efficitur mauris, a porttitor lacus fermentum at.</p>
+                    </div>
+                    <div>25/3/2021</div>
+                </section>
+                <section class="spark-announcements-notices-container">
+                    <div style="width: 20%;padding: 1rem;">
+                        <img class="spark-announcements-notices-image"
+                            src="https://github.com/PALATTY-J/Channel-Page-Hackathon/blob/main/gallery1.jpeg?raw=true">
+                    </div>
+                    <div class="spark-announcements-notices-content">
+                        <p><b>News Title</b></p>
+                        <p style="overflow: hidden;">Morbi metus massa, vulputate eu lobortis nec, vestibulum at neque.
+                            Sed non dolor vel sem
+                            congue congue eu nec erat. Quisque eleifend tristique sagittis. In hac habitasse platea
+                            dictumst. Quisque eget nisl blandit, ultrices dui elementum, laoreet metus. Morbi tempus
+                            mollis erat, sed semper erat maximus in. Nullam rutrum sagittis erat, nec hendrerit leo. Ut
+                            lobortis ullamcorper neque. Quisque velit sapien, tincidunt in magna quis, dictum vehicula
+                            erat. Sed non dolor rhoncus, gravida metus in, mollis mi. Pellentesque ut justo tincidunt,
+                            consectetur mauris a, aliquam purus. Aenean porta nec erat in accumsan. Pellentesque
+                            habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas
+                            eget nisi tincidunt, iaculis mauris in, elementum tortor. Nam auctor eget mauris sit amet
+                            vulputate. Nam tincidunt efficitur mauris, a porttitor lacus fermentum at.</p>
+                    </div>
+                    <div>25/3/2021</div>
+                </section>
+                <section class="spark-announcements-notices-container">
+                    <div style="width: 20%;padding: 1rem;">
+                        <img class="spark-announcements-notices-image"
+                            src="https://github.com/PALATTY-J/Channel-Page-Hackathon/blob/main/gallery1.jpeg?raw=true">
+                    </div>
+                    <div class="spark-announcements-notices-content">
+                        <p><b>News Title</b></p>
+                        <p style="overflow: hidden;">Morbi metus massa, vulputate eu lobortis nec, vestibulum at neque.
+                            Sed non dolor vel sem
+                            congue congue eu nec erat. Quisque eleifend tristique sagittis. In hac habitasse platea
+                            dictumst. Quisque eget nisl blandit, ultrices dui elementum, laoreet metus. Morbi tempus
+                            mollis erat, sed semper erat maximus in. Nullam rutrum sagittis erat, nec hendrerit leo. Ut
+                            lobortis ullamcorper neque. Quisque velit sapien, tincidunt in magna quis, dictum vehicula
+                            erat. Sed non dolor rhoncus, gravida metus in, mollis mi. Pellentesque ut justo tincidunt,
+                            consectetur mauris a, aliquam purus. Aenean porta nec erat in accumsan. Pellentesque
+                            habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas
+                            eget nisi tincidunt, iaculis mauris in, elementum tortor. Nam auctor eget mauris sit amet
+                            vulputate. Nam tincidunt efficitur mauris, a porttitor lacus fermentum at.</p>
+                    </div>
+                    <div>25/3/2021</div>
+                </section>
+            </section>
+            <section class="spark-announcement-news">
+                <h1 class="spark-announcement-banner">
+                    News
+                </h1>
+                <section class="spark-announcements-news-container">
+                    Hello This is Just a Notice - Date : 23/3/2021
+                </section>
+                <section class="spark-announcements-news-container">
+                    Hello This is Just a Notice - Date : 23/3/2021
+                </section>
+                <section class="spark-announcements-news-container">
+                    Hello This is Just a Notice - Date : 23/3/2021
+                </section>
+                <section class="spark-announcements-news-container">
+                    Hello This is Just a Notice - Date : 23/3/2021
+                </section>
+                <section class="spark-announcements-news-container">
+                    Hello This is Just a Notice - Date : 23/3/2021
+                </section>
+                <section class="spark-announcements-news-container">
+                    Hello This is Just a Notice - Date : 23/3/2021
+                </section>
+                <section class="spark-announcements-news-container">
+                    Hello This is Just a Notice - Date : 23/3/2021
+                </section>
+            </section>
+        </section>
+    </section>
+
+    <section id='faq-section'>
+        <div class="spark-faq-content-header">
+            <p class="spark-faq-section_title">FAQ</p>
+            <hr class="spark-faq-spark_divider">
+            <hr class="bottom_border">
+            <br>
+        </div>
+
+        <small>Click on each Question to view their respective answers</small>
+
+        <div class="faq-content">
+            <div class="faq-question">
+                <input id="q1" type="checkbox" class="panel">
+                <!-- <div class="spark-faq-plus">+</div> -->
+                <label for="q1" class="spark-faq-panel-title"><b>1.</b> Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit, sed
+                    do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua.?</label>
+                <div class="spark-faq-panel-content">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi
+                    ut aliquip ex ea commodo consequat. </div>
+            </div>
+
+            <div class="faq-question">
+                <input id="q2" type="checkbox" class="panel">
+                <!-- <div class="spark-faq-plus">+</div> -->
+                <label for="q2" class="spark-faq-panel-title"><b>2.</b> Sed ut perspiciatis unde omnis iste natus error
+                    sit voluptatem
+                    accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
+                    quasi architecto beatae vitae dicta sunt explicabo.?</label>
+                <div class="spark-faq-panel-content">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+                    aut
+                    fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</div>
+            </div>
+
+            <div class="faq-question">
+                <input id="q3" type="checkbox" class="panel">
+                <!-- <div class="spark-faq-plus">+</div> -->
+                <label for="q3" class="spark-faq-panel-title"><b>3.</b> At vero eos et accusamus et iusto odio
+                    dignissimos ducimus qui
+                    blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias</label>
+                <div class="spark-faq-panel-content">quis nostrum exercitationem ullam corporis suscipit laboriosam,
+                    nisi ut
+                    aliquid ex ea commodi &nbsp;
+                </div>
+            </div>
+
+            <div class="faq-question">
+                <input id="q4" type="checkbox" class="panel">
+                <!-- <div class="spark-faq-plus">+</div> -->
+                <label for="q4" class="spark-faq-panel-title"><b>4.</b> Aut aut reiciendis voluptatibus maiores alias
+                    consequatur aut
+                    perferendis doloribus asperiores repellat ?</label>
+                <div class="spark-faq-panel-content">am libero tempore, cum soluta nobis est eligendi optio cumque nihil
+                    impedit quo minus id quod maxime &nbsp;
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section style="display: none" id="my-profile-section">
+        <section class="my-profile-container">
+            <section class="my-profile-options-section">
+                <div class="options-division" onclick="showElement('my-profile-home-page')">
+                    <span class="material-icons icons-individual">
+                        home
+                    </span> Home
+                </div>
+
+                <br>
+
+                <div class="options-division" onclick="showElement('my-profile-timetable-page')">
+                    <span class="material-icons icons-individual">
+                        table_view
+                    </span>
+                    Timetable
+                </div>
+                <br>
+
+
+                <div class="options-division" onclick="showElement('my-profile-curriculam-page')">
+                    <span class="material-icons icons-individual">
+                        date_range
+                    </span>
+                    Curriculam
+                </div>
+                <br>
+
+
+                <div class="options-division" onclick="showElement('my-profile-courses-page')">
+                    <span class="material-icons icons-individual">
+                        menu_book
+                    </span>
+                    Courses
+                </div>
+                <br>
+
+
+                <div class="options-division" onclick="showElement('my-profile-chat-page')">
+                    <span class="material-icons icons-individual">
+                        chat
+                    </span>
+                    Chat
+                </div>
+                <br>
+
+
+                <div class="options-division" onclick="showElement('my-profile-teachers-page')">
+                    <span class="material-icons icons-individual">
+                        person
+                    </span>
+                    Teachers
+                </div>
+                <br>
+
+
+                <div class="options-division" onclick="showElement('my-profile-classmates-page')">
+                    <span class="material-icons icons-individual">
+                        groups
+                    </span>
+                    Classmates
+                </div>
+                <br>
+
+
+                <div class="options-division" onclick="showElement('my-profile-awards-page')">
+                    <span class="material-icons icons-individual">
+                        emoji_events
+                    </span>
+                    Awards
+                </div>
+                <br>
+                <div class="options-division" onclick="goBack()">
+                    <span class="material-icons icons-individual">
+                        <span class="material-icons-outlined">
+                            apartment
+                        </span>
+                    </span>
+                    Institution Page
+                </div>
+                <br>
+            </section>
+
+            <section class="my-profile-content-section">
+
+                <section id="my-profile-home-page" class="my-profile-home active-profile-page">
+                    <div class="cover-page-profile">
+                        <img class="profile-picture"
+                            src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/hofprofile9.jpeg">
+                        <span class="profile-name">Carol Denvers</span>
+                    </div>
+
+                    <div class="profile-home-options-container">
+                        <ul class="profile-home-options">
+                            <li onclick="scrollToElement('profile-about-me')">About me</li>
+                            <li onclick="scrollToElement('profile-my-progress')">Progress</li>
+                            <li onclick="scrollToElement('profile-my-courses')">Courses</li>
+                            <li onclick="scrollToElement('profile-my-results')">Results</li>
+                        </ul>
+                    </div>
+
+                    <section>
+
+                        <section id="profile-about-me" class="profile-home-about-me">
+                            <span class="heading-profile-about-me">About me :</span>
+                            <div class="about-me-individual-options-container">
+                                <div class="about-me-individual-options">
+                                    <div class="about-me-individual-options-heading">Class :&nbsp;</div>
+                                    <div>XI</div>
+                                </div>
+                                <div class="about-me-individual-options">
+                                    <div class="about-me-individual-options-heading">Date of Birth :&nbsp;</div>
+                                    <div>15/5/2000</div>
+                                </div>
+                                <div class="about-me-individual-options">
+                                    <div class="about-me-individual-options-heading">Date of Admission :&nbsp;</div>
+                                    <div>21/6/2005</div>
+                                </div>
+
+                                <div class="about-me-individual-options">
+                                    <div class="about-me-individual-options-heading">Remarks :&nbsp;</div>
+                                    <div>Good Student</div>
+                                </div>
+                                <div class="about-me-individual-options">
+                                    <div class="about-me-individual-options-heading">Division :&nbsp;</div>
+                                    <div>A</div>
+                                </div>
+                                <div class="about-me-individual-options">
+                                    <div class="about-me-individual-options-heading">Awards :&nbsp;</div>
+                                    <div>Science Olympiad,Science Olympiad,Science Olympiad,Science Olympiad</div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="profile-my-progress" class="profile-home-about-me">
+                            <span class="heading-profile-about-me">My Progress :</span>
+                            <span style="margin-bottom: .2rem;">( % of syllabus covered )</span>
+                            <div class="about-me-individual-options-container">
+                                <div class="about-me-individual-options">
+                                    <div class="about-me-individual-options-heading">Physics :&nbsp;</div>
+                                    <div>30%</div>
+                                </div>
+                                <div class="about-me-individual-options">
+                                    <div class="about-me-individual-options-heading">Chemistry :&nbsp;</div>
+                                    <div>50%</div>
+                                </div>
+                                <div class="about-me-individual-options">
+                                    <div class="about-me-individual-options-heading">Mathematics :&nbsp;</div>
+                                    <div>80%</div>
+                                </div>
+
+                                <div class="about-me-individual-options">
+                                    <div class="about-me-individual-options-heading">English :&nbsp;</div>
+                                    <div>85%</div>
+                                </div>
+                                <div class="about-me-individual-options">
+                                    <div class="about-me-individual-options-heading">Hindi :&nbsp;</div>
+                                    <div>65%</div>
+                                </div>
+                                <div class="about-me-individual-options">
+                                    <div class="about-me-individual-options-heading">Physical Education :&nbsp;</div>
+                                    <div>67%</div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="profile-my-courses" class="profile-home-about-me">
+                            <span class="heading-profile-about-me">My Courses :</span>
+                            <div class="about-me-individual-options-container">
+                                <div class="about-me-individual-options">
+                                    <div class="about-me-individual-options-heading">Introduction to Programming :&nbsp;
+                                    </div>
+                                    <div>30%</div>
+                                </div>
+                                <div class="about-me-individual-options">
+                                    <div class="about-me-individual-options-heading">How to be confident :&nbsp;</div>
+                                    <div>10%</div>
+                                </div>
+                                <div class="about-me-individual-options">
+                                    <div class="about-me-individual-options-heading">Introduction to Public Speaking
+                                        :&nbsp;
+                                    </div>
+                                    <div>5%</div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="profile-my-results" class="profile-home-about-me">
+                            <span class="heading-profile-about-me">My Results :</span>
+                            <div class="about-me-individual-options-container">
+                                <div class="about-me-individual-options">
+                                    <div class="about-me-individual-options-heading">First Internals :&nbsp;</div>
+                                    <div>Grade A</div>
+                                </div>
+                                <div class="about-me-individual-options">
+                                    <div class="about-me-individual-options-heading">Second Internals :&nbsp;</div>
+                                    <div>Grade A+</div>
+                                </div>
+                                <div class="about-me-individual-options">
+                                    <div class="about-me-individual-options-heading">Half Term Examination :&nbsp;</div>
+                                    <div>Grade B+</div>
+                                </div>
+                            </div>
+                        </section>
+
+
+                    </section>
+                </section>
+
+
+                <section id="my-profile-timetable-page" class="inactive-profile-page">
+                    <section>
+                        <div class="aboutus-content-header">
+                            <p class="aboutus-section_title">Time Table</p>
+                            <hr class="aboutus-spark_divider">
+                            <hr class="aboutus-bottom_border">
+                        </div>
+                        <section>
+                            <div class="table-heading">Daily Timetable</div>
+                            <section>
+                                <div class="flex-table">
+                                    <div class="grid-rows-6-spark">
+                                        <div class="grid-row-cell cell-hightlight">Time</div>
+                                        <div class="grid-row-cell cell-hightlight">Monday</div>
+                                        <div class="grid-row-cell cell-hightlight">Tuesday</div>
+                                        <div class="grid-row-cell cell-hightlight">Wednesday</div>
+                                        <div class="grid-row-cell cell-hightlight">Thursday</div>
+                                        <div class="grid-row-cell cell-hightlight">Friday</div>
+                                    </div>
+                                    <div class="grid-rows-6-spark">
+                                        <div class="grid-row-cell">7:00-7:30</div>
+                                        <div class="grid-row-cell">Maths</div>
+                                        <div class="grid-row-cell">English</div>
+                                        <div class="grid-row-cell">P.T</div>
+                                        <div class="grid-row-cell">Yoga</div>
+                                        <div class="grid-row-cell">Hindi</div>
+                                    </div>
+                                    <div class="grid-rows-6-spark">
+                                        <div class="grid-row-cell">7:30-8:00</div>
+                                        <div class="grid-row-cell">English</div>
+                                        <div class="grid-row-cell">Maths</div>
+                                        <div class="grid-row-cell">EVS</div>
+                                        <div class="grid-row-cell">Physics</div>
+                                        <div class="grid-row-cell">Chemistry</div>
+                                    </div>
+
+                                    <div class="grid-rows-6-spark">
+                                        <div class="grid-row-cell">8:00-8:30</div>
+                                        <div class="grid-row-cell">Hindi</div>
+                                        <div class="grid-row-cell">Chemistry</div>
+                                        <div class="grid-row-cell">Moral Edu</div>
+                                        <div class="grid-row-cell">Computer Sci</div>
+                                        <div class="grid-row-cell">Maths</div>
+                                    </div>
+
+                                    <div class="grid-rows-6-spark">
+                                        <div class="grid-row-cell">8:30-9:00</div>
+                                        <div class="grid-row-cell">Maths</div>
+                                        <div class="grid-row-cell">English</div>
+                                        <div class="grid-row-cell">P.T</div>
+                                        <div class="grid-row-cell">Yoga</div>
+                                        <div class="grid-row-cell">Hindi</div>
+                                    </div>
+
+                                    <div class="grid-rows-6-spark">
+                                        <div class="grid-row-cell cell-hightlight-gn">9:00-9:30</div>
+                                        <div class="grid-row-cell cell-hightlight-gn">Break</div>
+                                        <div class="grid-row-cell cell-hightlight-gn">Break</div>
+                                        <div class="grid-row-cell cell-hightlight-gn">Break</div>
+                                        <div class="grid-row-cell cell-hightlight-gn">Break</div>
+                                        <div class="grid-row-cell cell-hightlight-gn">Break</div>
+                                    </div>
+
+                                    <div class="grid-rows-6-spark">
+                                        <div class="grid-row-cell">9:30-10:00</div>
+                                        <div class="grid-row-cell">Maths</div>
+                                        <div class="grid-row-cell">English</div>
+                                        <div class="grid-row-cell">P.T</div>
+                                        <div class="grid-row-cell">Yoga</div>
+                                        <div class="grid-row-cell">Hindi</div>
+                                    </div>
+
+                                    <div class="grid-rows-6-spark">
+                                        <div class="grid-row-cell">10:00-10:30</div>
+                                        <div class="grid-row-cell">Maths</div>
+                                        <div class="grid-row-cell">English</div>
+                                        <div class="grid-row-cell">P.T</div>
+                                        <div class="grid-row-cell">Yoga</div>
+                                        <div class="grid-row-cell">Hindi</div>
+                                    </div>
+
+                                    <div class="grid-rows-6-spark">
+                                        <div class="grid-row-cell">10:30-11:00</div>
+                                        <div class="grid-row-cell">Maths</div>
+                                        <div class="grid-row-cell">English</div>
+                                        <div class="grid-row-cell">P.T</div>
+                                        <div class="grid-row-cell">Yoga</div>
+                                        <div class="grid-row-cell">Hindi</div>
+                                    </div>
+
+                                    <div class="grid-rows-6-spark">
+                                        <div class="grid-row-cell">11:00-11:30</div>
+                                        <div class="grid-row-cell">Maths</div>
+                                        <div class="grid-row-cell">English</div>
+                                        <div class="grid-row-cell">P.T</div>
+                                        <div class="grid-row-cell">Yoga</div>
+                                        <div class="grid-row-cell">Hindi</div>
+                                    </div>
+
+                                </div>
+                            </section>
+                        </section>
+                        <br>
+                        <br>
+                        <section>
+                            <div class="table-heading">Exam Timetable</div>
+                            <br>
+                            <h4>Start Date - 14/9/2021</h4>
+                            <br>
+                            <section>
+                                <div class="flex-table">
+                                    <div class="grid-rows-6-spark">
+                                        <div class="grid-row-cell cell-hightlight">Date</div>
+                                        <div class="grid-row-cell cell-hightlight">Day</div>
+                                        <div class="grid-row-cell cell-hightlight">Subject</div>
+                                        <div class="grid-row-cell cell-hightlight">Time</div>
+                                        <div class="grid-row-cell cell-hightlight">Syllabus</div>
+                                        <div class="grid-row-cell cell-hightlight">Center</div>
+                                    </div>
+                                    <div class="grid-rows-6-spark">
+                                        <div class="grid-row-cell">14/9/2021</div>
+                                        <div class="grid-row-cell">Tuesday</div>
+                                        <div class="grid-row-cell">English</div>
+                                        <div class="grid-row-cell">9:00-12:00</div>
+                                        <div class="grid-row-cell">Module 1-3</div>
+                                        <div class="grid-row-cell">Class - VII A</div>
+                                    </div>
+                                    <div class="grid-rows-6-spark">
+                                        <div class="grid-row-cell">15/9/2021</div>
+                                        <div class="grid-row-cell">Wednesday</div>
+                                        <div class="grid-row-cell">Maths</div>
+                                        <div class="grid-row-cell">9:00-12:00</div>
+                                        <div class="grid-row-cell">Module 1-3</div>
+                                        <div class="grid-row-cell">Class - VII A</div>
+                                    </div>
+
+                                    <div class="grid-rows-6-spark">
+                                        <div class="grid-row-cell">16/9/2021</div>
+                                        <div class="grid-row-cell">Thursday</div>
+                                        <div class="grid-row-cell">Chemistry</div>
+                                        <div class="grid-row-cell">9:00-12:00</div>
+                                        <div class="grid-row-cell">Module 1-3</div>
+                                        <div class="grid-row-cell">Class - VII A</div>
+                                    </div>
+
+                                    <div class="grid-rows-6-spark">
+                                        <div class="grid-row-cell">17/9/2021</div>
+                                        <div class="grid-row-cell">Friday</div>
+                                        <div class="grid-row-cell">Comp Sci</div>
+                                        <div class="grid-row-cell">9:00-12:00</div>
+                                        <div class="grid-row-cell">Module 1-3</div>
+                                        <div class="grid-row-cell">Class - VII A</div>
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+
+                <section id="my-profile-curriculam-page" class="inactive-profile-page">
+                    <section>
+                        <div class="aboutus-content-header">
+                            <p class="aboutus-section_title">Curriculam </p>
+                            <hr class="aboutus-spark_divider">
+                            <hr class="aboutus-bottom_border">
+                        </div>
+                        <section class="curriculam-subject-section">
+                            <div class="curriculam-subject-name">Physics</div>
+                            <br>
+                            <div class="subject-table">
+                                <div class="subject-table-grid-row curriculam-border-top curriculam-border-bottom">
+                                    <div class="module-name curriculam-border-left curriculam-border-right">Module 2
+                                    </div>
+                                    <div class="curriculam-flex-data curriculam-border-right">
+                                        <div>Electrostatics, </div>
+                                        <div>
+                                            Chapter–1: Electric Charges and Fields
+                                        </div>
+                                        <div>
+                                            Chapter–2: Electrostatic
+                                            Potential and Capacitance</div>
+                                    </div>
+                                </div>
+
+                                <div class="subject-table-grid-row curriculam-border-bottom">
+                                    <div class="module-name curriculam-border-left curriculam-border-right">Module 2
+                                    </div>
+                                    <div class="curriculam-flex-data curriculam-border-right">
+                                        <div>Current Electricity </div>
+                                        <div>
+                                            Chapter–3: Current Electricity </div>
+                                    </div>
+                                </div>
+
+                                <div class="subject-table-grid-row curriculam-border-bottom">
+                                    <div class="module-name curriculam-border-left curriculam-border-right">Module 3
+                                    </div>
+                                    <div class="curriculam-flex-data curriculam-border-right">
+                                        <div>Magnetic Effects of Current and Magnetism
+                                        </div>
+                                        <div>
+                                            Chapter–4: Moving Charges and Magnetism
+                                        </div>
+                                        <div>
+                                            Chapter–5: Magnetism and Matter
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="subject-table-grid-row curriculam-border-bottom">
+                                    <div class="module-name curriculam-border-left curriculam-border-right">Module 4
+                                    </div>
+                                    <div class="curriculam-flex-data curriculam-border-right">
+                                        <div>Magnetic Effects of Current and Magnetism
+                                        </div>
+                                        <div>
+                                            Chapter–4: Moving Charges and Magnetism
+                                        </div>
+                                        <div>
+                                            Chapter–5: Magnetism and Matter
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="subject-table-grid-row curriculam-border-bottom">
+                                    <div class="module-name curriculam-border-left curriculam-border-right">Module 5
+                                    </div>
+                                    <div class="curriculam-flex-data curriculam-border-right">
+                                        <div>Magnetic Effects of Current and Magnetism
+                                        </div>
+                                        <div>
+                                            Chapter–4: Moving Charges and Magnetism
+                                        </div>
+                                        <div>
+                                            Chapter–5: Magnetism and Matter
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <br>
+                        <section class="curriculam-subject-section">
+                            <div class="curriculam-subject-name">Chemistry</div>
+                            <br>
+                            <div class="subject-table">
+                                <div class="subject-table-grid-row curriculam-border-top curriculam-border-bottom">
+                                    <div class="module-name curriculam-border-left curriculam-border-right">Module 2
+                                    </div>
+                                    <div class="curriculam-flex-data curriculam-border-right">
+                                        <div>Electrostatics, </div>
+                                        <div>
+                                            Chapter–1: Electric Charges and Fields
+                                        </div>
+                                        <div>
+                                            Chapter–2: Electrostatic
+                                            Potential and Capacitance</div>
+                                    </div>
+                                </div>
+
+                                <div class="subject-table-grid-row curriculam-border-bottom">
+                                    <div class="module-name curriculam-border-left curriculam-border-right">Module 2
+                                    </div>
+                                    <div class="curriculam-flex-data curriculam-border-right">
+                                        <div>Current Electricity </div>
+                                        <div>
+                                            Chapter–3: Current Electricity </div>
+                                    </div>
+                                </div>
+
+                                <div class="subject-table-grid-row curriculam-border-bottom">
+                                    <div class="module-name curriculam-border-left curriculam-border-right">Module 3
+                                    </div>
+                                    <div class="curriculam-flex-data curriculam-border-right">
+                                        <div>Magnetic Effects of Current and Magnetism
+                                        </div>
+                                        <div>
+                                            Chapter–4: Moving Charges and Magnetism
+                                        </div>
+                                        <div>
+                                            Chapter–5: Magnetism and Matter
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="subject-table-grid-row curriculam-border-bottom">
+                                    <div class="module-name curriculam-border-left curriculam-border-right">Module 4
+                                    </div>
+                                    <div class="curriculam-flex-data curriculam-border-right">
+                                        <div>Magnetic Effects of Current and Magnetism
+                                        </div>
+                                        <div>
+                                            Chapter–4: Moving Charges and Magnetism
+                                        </div>
+                                        <div>
+                                            Chapter–5: Magnetism and Matter
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="subject-table-grid-row curriculam-border-bottom">
+                                    <div class="module-name curriculam-border-left curriculam-border-right">Module 5
+                                    </div>
+                                    <div class="curriculam-flex-data curriculam-border-right">
+                                        <div>Magnetic Effects of Current and Magnetism
+                                        </div>
+                                        <div>
+                                            Chapter–4: Moving Charges and Magnetism
+                                        </div>
+                                        <div>
+                                            Chapter–5: Magnetism and Matter
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <br>
+                        <section class="curriculam-subject-section">
+                            <div class="curriculam-subject-name">Computer Science</div>
+                            <br>
+                            <div class="subject-table">
+                                <div class="subject-table-grid-row curriculam-border-top curriculam-border-bottom">
+                                    <div class="module-name curriculam-border-left curriculam-border-right">Module 2
+                                    </div>
+                                    <div class="curriculam-flex-data curriculam-border-right">
+                                        <div>Electrostatics, </div>
+                                        <div>
+                                            Chapter–1: Electric Charges and Fields
+                                        </div>
+                                        <div>
+                                            Chapter–2: Electrostatic
+                                            Potential and Capacitance</div>
+                                    </div>
+                                </div>
+
+                                <div class="subject-table-grid-row curriculam-border-bottom">
+                                    <div class="module-name curriculam-border-left curriculam-border-right">Module 2
+                                    </div>
+                                    <div class="curriculam-flex-data curriculam-border-right">
+                                        <div>Current Electricity </div>
+                                        <div>
+                                            Chapter–3: Current Electricity </div>
+                                    </div>
+                                </div>
+
+                                <div class="subject-table-grid-row curriculam-border-bottom">
+                                    <div class="module-name curriculam-border-left curriculam-border-right">Module 3
+                                    </div>
+                                    <div class="curriculam-flex-data curriculam-border-right">
+                                        <div>Magnetic Effects of Current and Magnetism
+                                        </div>
+                                        <div>
+                                            Chapter–4: Moving Charges and Magnetism
+                                        </div>
+                                        <div>
+                                            Chapter–5: Magnetism and Matter
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="subject-table-grid-row curriculam-border-bottom">
+                                    <div class="module-name curriculam-border-left curriculam-border-right">Module 4
+                                    </div>
+                                    <div class="curriculam-flex-data curriculam-border-right">
+                                        <div>Magnetic Effects of Current and Magnetism
+                                        </div>
+                                        <div>
+                                            Chapter–4: Moving Charges and Magnetism
+                                        </div>
+                                        <div>
+                                            Chapter–5: Magnetism and Matter
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="subject-table-grid-row curriculam-border-bottom">
+                                    <div class="module-name curriculam-border-left curriculam-border-right">Module 5
+                                    </div>
+                                    <div class="curriculam-flex-data curriculam-border-right">
+                                        <div>Magnetic Effects of Current and Magnetism
+                                        </div>
+                                        <div>
+                                            Chapter–4: Moving Charges and Magnetism
+                                        </div>
+                                        <div>
+                                            Chapter–5: Magnetism and Matter
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <br>
+                    </section>
+                </section>
+
+                <section id="my-profile-courses-page" class="inactive-profile-page">
+                    <section>
+                        <div class="aboutus-content-header">
+                            <p class="aboutus-section_title">Courses</p>
+                            <hr class="aboutus-spark_divider">
+                            <hr class="aboutus-bottom_border">
+                        </div>
+                        <section class="spark-courses-section">
+                            <p class="spark-courses-section-heading">Ongoing Courses</p>
+                            <section class="spark-courses-card-container">
+                                <div class="spark-courses-card">
+                                    <img class="spark-courses-image"
+                                        src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/gallery1.jpeg">
+                                    <div class="course-heading">Heading</div>
+                                    <span>32 % <progress value="32" max="100"> 32% </progress></span>
+                                </div>
+
+                                <div class="spark-courses-card">
+                                    <img class="spark-courses-image"
+                                        src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/gallery1.jpeg">
+                                    <div class="course-heading">Heading</div>
+                                    <span>12 % <progress value="12" max="100"> 12% </progress></span>
+                                </div>
+
+                                <div class="spark-courses-card">
+                                    <img class="spark-courses-image"
+                                        src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/gallery1.jpeg">
+                                    <div class="course-heading">Heading</div>
+                                    <span>22 % <progress value="22" max="100"> 22% </progress></span>
+                                </div>
+
+                                <div class="spark-courses-card">
+                                    <img class="spark-courses-image"
+                                        src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/gallery1.jpeg">
+                                    <div class="course-heading">Heading</div>
+                                    <span>42 % <progress value="42" max="100"> 42% </progress></span>
+                                </div>
+
+                                <div class="spark-courses-card">
+                                    <img class="spark-courses-image"
+                                        src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/gallery1.jpeg">
+                                    <div class="course-heading">Heading</div>
+                                    <span>62 % <progress value="62" max="100"> 62% </progress></span>
+                                </div>
+
+                            </section>
+                        </section>
+                        <br>
+                        <br>
+                        <section class="spark-courses-section">
+                            <p class="spark-courses-section-heading">Completed Courses</p>
+                            <section class="spark-courses-card-container">
+                                <div class="spark-courses-card">
+                                    <img class="spark-courses-image"
+                                        src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/gallery1.jpeg">
+                                    <div class="course-heading">Heading</div>
+                                    <span>100 % <progress value="100" max="100"> 100% </progress></span>
+                                </div>
+
+                                <div class="spark-courses-card">
+                                    <img class="spark-courses-image"
+                                        src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/gallery1.jpeg">
+                                    <div class="course-heading">Heading</div>
+                                    <span>100 % <progress value="100" max="100"> 100% </progress></span>
+                                </div>
+
+                                <div class="spark-courses-card">
+                                    <img class="spark-courses-image"
+                                        src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/gallery1.jpeg">
+                                    <div class="course-heading">Heading</div>
+                                    <span>100 % <progress value="100" max="100"> 100% </progress></span>
+                                </div>
+
+                                <div class="spark-courses-card">
+                                    <img class="spark-courses-image"
+                                        src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/gallery1.jpeg">
+                                    <div class="course-heading">Heading</div>
+                                    <span>100 % <progress value="100" max="100"> 100% </progress></span>
+                                </div>
+
+                                <div class="spark-courses-card">
+                                    <img class="spark-courses-image"
+                                        src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/gallery1.jpeg">
+                                    <div class="course-heading">Heading</div>
+                                    <span>100 % <progress value="100" max="100"> 100% </progress></span>
+                                </div>
+
+                            </section>
+                        </section>
+                    </section>
+                </section>
+
+                <section id="my-profile-chat-page" class="inactive-profile-page">
+                    <section>
+                        <section class="spark-chat-container">
+                            <section class="spark-chat-feed">
+                                <div class="spark-chat-feed-profile-container">
+                                    <div>
+                                        <img class="spark-chat-feed-profile-image"
+                                            src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/hofprofile.jpeg">
+                                    </div>
+                                    <div class="spark-chat-feed-profile-details">
+                                        <div style="font-weight: bold;">Vincent Peter</div>
+                                        <div><span class="material-icons spark-chat-offline-icon">
+                                                fiber_manual_record
+                                            </span>&nbsp;offline</div>
+                                    </div>
+                                </div>
+                                <div class="spark-chat-feed-profile-container">
+                                    <div>
+                                        <img class="spark-chat-feed-profile-image"
+                                            src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/hofprofile.jpeg">
+                                    </div>
+                                    <div class="spark-chat-feed-profile-details">
+                                        <div style="font-weight: bold;">Vincent Peter</div>
+                                        <div><span class="material-icons spark-chat-offline-icon">
+                                                fiber_manual_record
+                                            </span>&nbsp;offline</div>
+                                    </div>
+                                </div>
+                                <div class="spark-chat-feed-profile-container">
+                                    <div>
+                                        <img class="spark-chat-feed-profile-image"
+                                            src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/hofprofile.jpeg">
+                                    </div>
+                                    <div class="spark-chat-feed-profile-details">
+                                        <div style="font-weight: bold;">Vincent Peter</div>
+                                        <div><span class="material-icons spark-chat-offline-icon">
+                                                fiber_manual_record
+                                            </span>&nbsp;offline</div>
+                                    </div>
+                                </div>
+                                <div class="spark-chat-feed-profile-container">
+                                    <div>
+                                        <img class="spark-chat-feed-profile-image"
+                                            src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/hofprofile.jpeg">
+                                    </div>
+                                    <div class="spark-chat-feed-profile-details">
+                                        <div style="font-weight: bold;">Vincent Peter</div>
+                                        <div><span class="material-icons spark-chat-offline-icon">
+                                                fiber_manual_record
+                                            </span>&nbsp;offline</div>
+                                    </div>
+                                </div>
+                                <div class="spark-chat-feed-profile-container">
+                                    <div>
+                                        <img class="spark-chat-feed-profile-image"
+                                            src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/hofprofile.jpeg">
+                                    </div>
+                                    <div class="spark-chat-feed-profile-details">
+                                        <div style="font-weight: bold;">Vincent Peter</div>
+                                        <div><span class="material-icons spark-chat-online-icon">
+                                                fiber_manual_record
+                                            </span>&nbsp;online</div>
+                                    </div>
+                                </div>
+                                <div class="spark-chat-feed-profile-container">
+                                    <div>
+                                        <img class="spark-chat-feed-profile-image"
+                                            src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/hofprofile.jpeg">
+                                    </div>
+                                    <div class="spark-chat-feed-profile-details">
+                                        <div style="font-weight: bold;">Vincent Peter</div>
+                                        <div><span class="material-icons spark-chat-online-icon">
+                                                fiber_manual_record
+                                            </span>&nbsp;online</div>
+                                    </div>
+                                </div>
+                                <div class="spark-chat-feed-profile-container">
+                                    <div>
+                                        <img class="spark-chat-feed-profile-image"
+                                            src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/hofprofile.jpeg">
+                                    </div>
+                                    <div class="spark-chat-feed-profile-details">
+                                        <div style="font-weight: bold;">Vincent Peter</div>
+                                        <div><span class="material-icons spark-chat-online-icon">
+                                                fiber_manual_record
+                                            </span>&nbsp;online</div>
+                                    </div>
+                                </div>
+                                <div class="spark-chat-feed-profile-container">
+                                    <div>
+                                        <img class="spark-chat-feed-profile-image"
+                                            src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/hofprofile.jpeg">
+                                    </div>
+                                    <div class="spark-chat-feed-profile-details">
+                                        <div style="font-weight: bold;">Vincent Peter</div>
+                                        <div><span class="material-icons spark-chat-online-icon">
+                                                fiber_manual_record
+                                            </span>&nbsp;online</div>
+                                    </div>
+                                </div>
+                                <div class="spark-chat-feed-profile-container">
+                                    <div>
+                                        <img class="spark-chat-feed-profile-image"
+                                            src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/hofprofile.jpeg">
+                                    </div>
+                                    <div class="spark-chat-feed-profile-details">
+                                        <div style="font-weight: bold;">Vincent Peter</div>
+                                        <div><span class="material-icons spark-chat-online-icon">
+                                                fiber_manual_record
+                                            </span>&nbsp;online</div>
+                                    </div>
+                                </div>
+                                <div class="spark-chat-feed-profile-container">
+                                    <div>
+                                        <img class="spark-chat-feed-profile-image"
+                                            src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/hofprofile.jpeg">
+                                    </div>
+                                    <div class="spark-chat-feed-profile-details">
+                                        <div style="font-weight: bold;">Vincent Peter</div>
+                                        <div><span class="material-icons spark-chat-online-icon">
+                                                fiber_manual_record
+                                            </span>&nbsp;online</div>
+                                    </div>
+                                </div>
+                                <div class="spark-chat-feed-profile-container">
+                                    <div>
+                                        <img class="spark-chat-feed-profile-image"
+                                            src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/hofprofile.jpeg">
+                                    </div>
+                                    <div class="spark-chat-feed-profile-details">
+                                        <div style="font-weight: bold;">Vincent Peter</div>
+                                        <div><span class="material-icons spark-chat-online-icon">
+                                                fiber_manual_record
+                                            </span>&nbsp;online</div>
+                                    </div>
+                                </div>
+                                <div class="spark-chat-feed-profile-container">
+                                    <div>
+                                        <img class="spark-chat-feed-profile-image"
+                                            src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/hofprofile.jpeg">
+                                    </div>
+                                    <div class="spark-chat-feed-profile-details">
+                                        <div style="font-weight: bold;">Vincent Peter</div>
+                                        <div><span class="material-icons spark-chat-online-icon">
+                                                fiber_manual_record
+                                            </span>&nbsp;online</div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="spark-chat-page">
+                                <section class="spark-chat-page-heading">
+                                    <div style="width: 20%;height: 100%;">
+                                        <img src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/hofprofile.jpeg"
+                                            class="spark-chat-page-heading-image">
+                                    </div>
+                                    <div style="width: 80%;" class="spark-chat-page-heading-content">
+                                        <div class="spark-chat-page-heading-name">Vincent Peter</div>
+                                        <div class="spark-chat-page-heading-last-seen">Last seen at 12:54</div>
+                                    </div>
+                                </section>
+                                <section class="spark-chat-page-content">
+                                    <div class="messages-from">
+                                        Hello
+                                    </div>
+
+                                    <div class="messages-to">
+                                        Hello
+                                    </div>
+
+                                    <div class="messages-from">
+                                        I had a doubt
+                                    </div>
+
+                                    <div class="messages-to">
+                                        Yes Please ask
+                                    </div>
+
+                                    <div class="messages-from">
+                                        Why does the earth rotate
+                                    </div>
+
+                                    <div class="messages-to">
+                                        Ohh thats an interesting question
+                                    </div>
+
+                                    <div class="messages-from">
+                                        Yeah It intrigued me as well
+                                    </div>
+
+                                    <div class="messages-to">
+                                        Its actually a simple explanation
+                                    </div>
+
+                                    <div class="messages-from">
+                                        Oh is it
+                                    </div>
+
+                                    <div class="messages-to">
+                                        Yes
+                                    </div>
+                                </section>
+                                <section class="spark-chat-page-input">
+                                    <input class="spark-chat-page-input-element" type="text"
+                                        placeholder="Type your message">
+                                </section>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+
+                <section id="my-profile-teachers-page" class="inactive-profile-page">
+                    <section>
+                        <section>
+                            <div class="spark-gallery-content-header">
+                                <p class="spark-gallery-section_title">My Teachers</p>
+
+                                <hr class="spark-gallery-spark_divider" />
+                                <hr class="spark-gallery-bottom_border" />
+                            </div>
+
+                            <p><small>The images must be of size 1200px*1200px for better asthetics</small></p>
+
+                            <div class="spark-gallery-container" style="grid-template-columns: 20% 20% 20%;">
+                                <div
+                                    class="spark-gallery-photo-card spark-gallery-skew-left spark-gallery-photo-card-border-blue">
+                                    <img alt="" class="spark-gallery-image"
+                                        src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/gallery1.jpeg" />
+                                    <p class="spark-gallery-title" style="font-size:18px;">Sunset</p>
+
+                                    <p class="spark-gallery-date" style="cursor: pointer;"><span class="material-icons">
+                                            question_answer
+                                        </span></p>
+                                </div>
+
+                                <div
+                                    class="spark-gallery-photo-card spark-gallery-skew-right spark-gallery-photo-card-border-green">
+                                    <img alt="" class="spark-gallery-image"
+                                        src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/gallery2.jpeg" />
+                                    <p class="spark-gallery-title" style="font-size:18px;">Park</p>
+
+                                    <p class="spark-gallery-date" style="cursor: pointer;"><span class="material-icons">
+                                            question_answer
+                                        </span></p>
+                                </div>
+
+                                <div
+                                    class="spark-gallery-photo-card spark-gallery-skew-left spark-gallery-photo-card-border-yellow">
+                                    <img alt="" class="spark-gallery-image"
+                                        src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/gallery3.jpeg" />
+                                    <p class="spark-gallery-title" style="font-size:18px;">Apple Farm</p>
+
+                                    <p class="spark-gallery-date" style="cursor: pointer;"><span class="material-icons">
+                                            question_answer
+                                        </span></p>
+                                </div>
+
+                                <div
+                                    class="spark-gallery-photo-card spark-gallery-skew-right spark-gallery-photo-card-border-red">
+                                    <img alt="" class="spark-gallery-image"
+                                        src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/gallery4.jpeg" />
+                                    <p class="spark-gallery-title" style="font-size:18px;">Mountains</p>
+
+                                    <p class="spark-gallery-date" style="cursor: pointer;"><span class="material-icons">
+                                            question_answer
+                                        </span></p>
+                                </div>
+
+                                <div
+                                    class="spark-gallery-photo-card spark-gallery-skew-left spark-gallery-photo-card-border-blue">
+                                    <img alt="" class="spark-gallery-image"
+                                        src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/gallery5.jpeg" />
+                                    <p class="spark-gallery-title" style="font-size:18px;">Himalayas</p>
+
+                                    <p class="spark-gallery-date" style="cursor: pointer;"><span class="material-icons">
+                                            question_answer
+                                        </span></p>
+                                </div>
+
+                                <div
+                                    class="spark-gallery-photo-card spark-gallery-skew-right spark-gallery-photo-card-border-green">
+                                    <img alt="" class="spark-gallery-image"
+                                        src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/gallery6.jpeg" />
+                                    <p class="spark-gallery-title" style="font-size:18px;">Light House</p>
+
+                                    <p class="spark-gallery-date" style="cursor: pointer;"><span class="material-icons">
+                                            question_answer
+                                        </span></p>
+                                </div>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+
+                <section id="my-profile-classmates-page" class="inactive-profile-page">
+                    <section>
+                        <section>
+                            <div class="spark-gallery-content-header">
+                                <p class="spark-gallery-section_title">My Classmates</p>
+
+                                <hr class="spark-gallery-spark_divider" />
+                                <hr class="spark-gallery-bottom_border" />
+                            </div>
+
+                            <p><small>The images must be of size 1200px*1200px for better asthetics</small></p>
+
+                            <div class="spark-gallery-container" style="grid-template-columns: 20% 20% 20%;">
+                                <div
+                                    class="spark-gallery-photo-card spark-gallery-skew-left spark-gallery-photo-card-border-blue">
+                                    <img alt="" class="spark-gallery-image"
+                                        src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/gallery1.jpeg" />
+                                    <p class="spark-gallery-title" style="font-size:18px;">Sunset</p>
+
+                                    <p class="spark-gallery-date" style="cursor: pointer;"><span class="material-icons">
+                                            question_answer
+                                        </span></p>
+                                </div>
+
+                                <div
+                                    class="spark-gallery-photo-card spark-gallery-skew-right spark-gallery-photo-card-border-green">
+                                    <img alt="" class="spark-gallery-image"
+                                        src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/gallery2.jpeg" />
+                                    <p class="spark-gallery-title" style="font-size:18px;">Park</p>
+
+                                    <p class="spark-gallery-date" style="cursor: pointer;"><span class="material-icons">
+                                            question_answer
+                                        </span></p>
+                                </div>
+
+                                <div
+                                    class="spark-gallery-photo-card spark-gallery-skew-left spark-gallery-photo-card-border-yellow">
+                                    <img alt="" class="spark-gallery-image"
+                                        src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/gallery3.jpeg" />
+                                    <p class="spark-gallery-title" style="font-size:18px;">Apple Farm</p>
+
+                                    <p class="spark-gallery-date" style="cursor: pointer;"><span class="material-icons">
+                                            question_answer
+                                        </span></p>
+                                </div>
+
+                                <div
+                                    class="spark-gallery-photo-card spark-gallery-skew-right spark-gallery-photo-card-border-red">
+                                    <img alt="" class="spark-gallery-image"
+                                        src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/gallery4.jpeg" />
+                                    <p class="spark-gallery-title" style="font-size:18px;">Mountains</p>
+
+                                    <p class="spark-gallery-date" style="cursor: pointer;"><span class="material-icons">
+                                            question_answer
+                                        </span></p>
+                                </div>
+
+                                <div
+                                    class="spark-gallery-photo-card spark-gallery-skew-left spark-gallery-photo-card-border-blue">
+                                    <img alt="" class="spark-gallery-image"
+                                        src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/gallery5.jpeg" />
+                                    <p class="spark-gallery-title" style="font-size:18px;">Himalayas</p>
+
+                                    <p class="spark-gallery-date" style="cursor: pointer;"><span class="material-icons">
+                                            question_answer
+                                        </span></p>
+                                </div>
+
+                                <div
+                                    class="spark-gallery-photo-card spark-gallery-skew-right spark-gallery-photo-card-border-green">
+                                    <img alt="" class="spark-gallery-image"
+                                        src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/gallery6.jpeg" />
+                                    <p class="spark-gallery-title" style="font-size:18px;">Light House</p>
+
+                                    <p class="spark-gallery-date" style="cursor: pointer;"><span class="material-icons">
+                                            question_answer
+                                        </span></p>
+                                </div>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+
+
+
+                <section id="my-profile-awards-page" class="inactive-profile-page">
+                    <section>
+                        <div class="spark-gallery-content-header">
+                            <p class="spark-gallery-section_title">Awards</p>
+
+                            <hr class="spark-gallery-spark_divider" />
+                            <hr class="spark-gallery-bottom_border" />
+                        </div>
+                        <section class="spark-awards-container">
+                            <div class="spark-awards-card-container">
+                                <div style="height: 100%;width: 30%;">
+                                    <img class="spark-awards-image"
+                                        src="https://github.com/PALATTY-J/Channel-Page-Hackathon/blob/main/gallery1.jpeg?raw=true">
+                                </div>
+                                <div class="spark-awards-content">
+                                    <div class="spark-awards-heading">Indian Mathematics Olympiad</div>
+                                    <div class="spark-awards-achievement">First Rank</div>
+                                    <div class="spark-awards-download-certificate">
+                                        <span class="material-icons">
+                                            file_download
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </section>
+                    </section>
+                </section>
+
+            </section>
+
+            <section class="friends-feed-section">
+
+                <section style="padding: 1rem;">
+                    <div>
+                        <h3 style="text-align: left;color: gray;">Online Classmates - </h3>
+
+                        <div class="feed-profile">
+                            <img class="feed-profile-image"
+                                src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/hofprofile9.jpeg">
+                            <span class="feed-profile-text">Carol Denvers
+                                <span class="material-icons icons-individual">
+                                    chat
+                                </span>
+                            </span>
+                        </div>
+
+                        <div class="feed-profile">
+                            <img class="feed-profile-image"
+                                src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/hofprofile9.jpeg">
+                            <span class="feed-profile-text">Carol Denvers
+                                <span class="material-icons icons-individual">
+                                    chat
+                                </span>
+                            </span>
+                        </div>
+                        <div class="feed-profile">
+                            <img class="feed-profile-image"
+                                src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/hofprofile9.jpeg">
+                            <span class="feed-profile-text">Carol Denvers
+                                <span class="material-icons icons-individual">
+                                    chat
+                                </span>
+                            </span>
+                        </div>
+                        <div class="feed-profile">
+                            <img class="feed-profile-image"
+                                src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/hofprofile9.jpeg">
+                            <span class="feed-profile-text">Carol Denvers
+                                <span class="material-icons icons-individual">
+                                    chat
+                                </span>
+                            </span>
+                        </div>
+                        <div class="feed-profile">
+                            <img class="feed-profile-image"
+                                src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/hofprofile9.jpeg">
+                            <span class="feed-profile-text">Carol Denvers
+                                <span class="material-icons icons-individual">
+                                    chat
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 style="text-align: left;color: gray;">Online Teachers - </h3>
+
+                        <div class="feed-profile">
+                            <img class="feed-profile-image"
+                                src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/hofprofile9.jpeg">
+                            <span class="feed-profile-text">Carol Denvers
+                                <span class="material-icons icons-individual">
+                                    chat
+                                </span>
+                            </span>
+                        </div>
+
+                        <div class="feed-profile">
+                            <img class="feed-profile-image"
+                                src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/hofprofile9.jpeg">
+                            <span class="feed-profile-text">Carol Denvers
+                                <span class="material-icons icons-individual">
+                                    chat
+                                </span>
+                            </span>
+                        </div>
+                        <div class="feed-profile">
+                            <img class="feed-profile-image"
+                                src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/hofprofile9.jpeg">
+                            <span class="feed-profile-text">Carol Denvers
+                                <span class="material-icons icons-individual">
+                                    chat
+                                </span>
+                            </span>
+                        </div>
+                        <div class="feed-profile">
+                            <img class="feed-profile-image"
+                                src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/hofprofile9.jpeg">
+                            <span class="feed-profile-text">Carol Denvers
+                                <span class="material-icons icons-individual">
+                                    chat
+                                </span>
+                            </span>
+                        </div>
+                        <div class="feed-profile">
+                            <img class="feed-profile-image"
+                                src="https://raw.githubusercontent.com/PALATTY-J/Channel-Page-Hackathon/main/hofprofile9.jpeg">
+                            <span class="feed-profile-text">Carol Denvers
+                                <span class="material-icons icons-individual">
+                                    chat
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                </section>
+
+            </section>
+
+        </section>
+    </section>
+
+
+
+</body>
+
+<script>
+
+    function scrollToElement(id) {
+        const element = document.getElementById(id);
+        element.scrollIntoView({ block: 'start', behavior: 'smooth' });
+    }
+
+    function showElement(id) {
+        const elementsArray = ['my-profile-home-page',
+            'my-profile-timetable-page', 'my-profile-curriculam-page',
+            'my-profile-courses-page', 'my-profile-chat-page', 'my-profile-teachers-page',
+            'my-profile-classmates-page', 'my-profile-awards-page'];
+
+        elementsArray.forEach(value => {
+            const indvidElements = document.getElementById(value);
+            indvidElements.classList.remove('active-profile-page');
+            indvidElements.classList.add('inactive-profile-page');
+        })
+
+        const element = document.getElementById(id);
+        element.classList.remove('inactive-profile-page');
+        element.classList.add('active-profile-page');
+    }
+
+
+
+    function myprofile() {
+        let arrayIds = ['nav-bar-section', 'about-us-section', 'mission-section', 'vision-section',
+            'facilities-section', 'hall-of-fame-section', 'spark-section'
+            , 'gallery-section', 'faq-section', 'announcements-section']
+
+
+
+        sectionProfile = document.getElementById('my-profile-section');
+        sectionProfile.setAttribute('style', 'display:block')
+
+
+        arrayIds.forEach(value => {
+            const element = document.getElementById(value);
+            element.setAttribute('style', 'display:none');
+        });
+    }
+
+
+    function goBack() {
+        let arrayIds = ['nav-bar-section', 'about-us-section', 'mission-section',
+            'vision-section', 'facilities-section', 'hall-of-fame-section', 'spark-section'
+            , 'gallery-section', 'faq-section', 'announcements-section'];
+        sectionProfile = document.getElementById('my-profile-section');
+        sectionProfile.setAttribute('style', 'display:none')
+
+
+        arrayIds.forEach(value => {
+            const element = document.getElementById(value);
+            element.setAttribute('style', 'display:block');
+        })
+    }
+
+
+</script>
